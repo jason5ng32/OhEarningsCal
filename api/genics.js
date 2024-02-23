@@ -34,8 +34,8 @@ async function generateEarningsICSCalendar() {
                 console.error(error);
                 return;
             }
-            writeFileSync('./ics/sp.ics', value);
-            console.log('Earnings calendar .ics file has been saved to ./ics/sp.ics.');
+            writeFileSync('./ics/selected.ics', value);
+            console.log('Earnings calendar .ics file has been saved to ./ics/selected.ics.');
         });
     } catch (error) {
         console.error('Error generating earnings ICS calendar:', error);

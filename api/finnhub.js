@@ -3,6 +3,8 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const sp500 = await import('./sp500.json', { assert: { type: 'json' } });
+const customstock = await import('./customstock.json', { assert: { type: 'json' } });
+const combinelist = [...sp500.default, ...customstock.default];
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -31,13 +33,13 @@ async function fetchEarningsCalendarData() {
 
     try {
 
-        const dataPeriod1 = await fetchEarningsData(firstPeriodStart, firstPeriodEnd, sp500.default);
+        const dataPeriod1 = await fetchEarningsData(firstPeriodStart, firstPeriodEnd, combinelist);
         await sleep(1000);
-        const dataPeriod2 = await fetchEarningsData(secondPeriodStart, secondPeriodEnd, sp500.default);
+        const dataPeriod2 = await fetchEarningsData(secondPeriodStart, secondPeriodEnd, combinelist);
         await sleep(1000);
-        const dataPeriod3 = await fetchEarningsData(thirdPeriodStart, thirdPeriodEnd, sp500.default);
+        const dataPeriod3 = await fetchEarningsData(thirdPeriodStart, thirdPeriodEnd, combinelist);
         await sleep(1000);
-        const dataPeriod4 = await fetchEarningsData(fourthPeriodStart, fourthPeriodEnd, sp500.default);
+        const dataPeriod4 = await fetchEarningsData(fourthPeriodStart, fourthPeriodEnd, combinelist);
 
         // 合并两个时间段的数据并去重
         const combinedData = [...dataPeriod1, ...dataPeriod2, ...dataPeriod3, ...dataPeriod4];
@@ -65,7 +67,7 @@ async function getEarningCalendar(req, res) {
     }
 }
 
-async function fetchEarningsData(startDate, endDate, sp500) {
+async function fetchEarningsData(startDate, endDate, stocklist) {
     return new Promise((resolve, reject) => {
         const url = `https://finnhub.io/api/v1/calendar/earnings?from=${startDate}&to=${endDate}&token=${process.env.FINNHUB_API_KEY}`;
         console.log('Fetching data for:', startDate, 'to', endDate);
@@ -76,7 +78,7 @@ async function fetchEarningsData(startDate, endDate, sp500) {
             });
             resp.on('end', () => {
                 const earningsData = JSON.parse(data);
-                const filteredData = filterEarningsData(earningsData.earningsCalendar, sp500);
+                const filteredData = filterEarningsData(earningsData.earningsCalendar, stocklist);
                 resolve(filteredData);
             });
         }).on('error', (err) => {
@@ -87,19 +89,18 @@ async function fetchEarningsData(startDate, endDate, sp500) {
 
 
 // 添加的格式化数据子函数
-function filterEarningsData(earningsCalendar, sp500) {
-    // 将 sp500 数据转换为以 symbol 为键的对象，便于快速查找
-    const sp500Map = sp500.reduce((acc, item) => {
+function filterEarningsData(earningsCalendar, stocklist) {
+    const stocks = stocklist.reduce((acc, item) => {
         acc[item.symbol] = item;
         return acc;
     }, {});
 
     return earningsCalendar
-        .filter(item => sp500Map.hasOwnProperty(item.symbol))
+        .filter(item => stocks.hasOwnProperty(item.symbol))
         .map(item => {
 
             const { date, epsActual, epsEstimate, revenueEstimate, revenueActual, symbol, quarter, year } = item;
-            const { companyName, industry, industryDetail, establishDate } = sp500Map[item.symbol];
+            const { companyName, industry, industryDetail, establishDate } = stocks[item.symbol];
 
             return {
                 symbol, // 股票代码
