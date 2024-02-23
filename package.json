@@ -1,0 +1,22 @@
+{
+  "name": "ohearningcal-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^8.2.2",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.2",
+    "ics": "^3.7.2",
+    "node-schedule": "^2.1.1",
+    "nodemon": "^3.0.3"
+  }
+}
