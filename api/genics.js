@@ -42,6 +42,6 @@ async function generateEarningsICSCalendar() {
     }
 }
 
-generateEarningsICSCalendar();
+// generateEarningsICSCalendar();
 
 export { generateEarningsICSCalendar };

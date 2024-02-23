@@ -14,7 +14,7 @@ const staticApp = express.static('ics');
 app.get('/api/cal', getEarningCalendar);
 app.use('/ics', express.static('ics'));
 
-schedule.scheduleJob('44 20 * * *', function () {
+schedule.scheduleJob('11 21 * * *', function () {
     console.log("Generating earnings calendar...");
     generateEarningsICSCalendar();
 });
