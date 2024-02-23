@@ -2,6 +2,7 @@ import schedule from 'node-schedule';
 import dotenv from 'dotenv';
 import express from 'express';
 import { getEarningCalendar } from './api/finnhub.js';
+import { getEarningCal } from './api/nasdaq.js';
 import { generateEarningsICSCalendar } from './api/genics.js';
 
 dotenv.config();
@@ -12,6 +13,7 @@ const port = process.env.PORT || 18302;
 const staticApp = express.static('ics');
 
 app.get('/api/cal', getEarningCalendar);
+app.use('/api/cal2', getEarningCal);
 app.use('/ics', express.static('ics'));
 
 schedule.scheduleJob('58 21 * * *', function () {

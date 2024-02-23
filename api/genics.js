@@ -1,18 +1,20 @@
 import { createEvents } from 'ics';
 import { writeFileSync } from 'fs';
-import { fetchEarningsCalendarData } from './finnhub.js'; // 假设这是从 finnhub.js 导入的 getEarningsData 函数
+// import { fetchEarningsCalendarData } from './finnhub.js';
+import { fetchEarningsCalendarData } from './nasdaq.js';
 
-// 假设 getEarningsData 已经修改为返回 Promise，以便使用 async/await
 async function generateEarningsICSCalendar() {
     try {
-        const earningsData = await fetchEarningsCalendarData(); // 获取财报数据
+        const date = `${new Date().getFullYear()}-${(new Date().getMonth() + 1).toString().padStart(2, '0')}-${new Date().getDate().toString().padStart(2, '0')}`;
+        console.log('Generating earnings calendar for', date);
+        const earningsData = await fetchEarningsCalendarData(date); // 获取财报数据
 
         const events = earningsData.map(entry => {
             const dateParts = entry.date.split('-').map(Number);
             const start = [dateParts[0], dateParts[1], dateParts[2]];
             return {
-                title: `${entry.companyName} ${entry.year} ${entry.quarter} 财报发布`,
-                description: `代码：${entry.symbol}，公司：${entry.companyName}，行业: ${entry.industry}，成立日期: ${entry.establishDate}，预计每股收益: ${entry.epsEstimate}，实际每股收益: ${entry.epsActual}，预计营收: ${entry.revenueEstimate}，实际营收: ${entry.revenueActual}。`,
+                title: `${entry.companyName} 财报发布`,
+                description: `财务季度：${entry.fiscalQuarterEnding}，代码：${entry.symbol}，公司：${entry.companyName}，行业: ${entry.industry}，成立日期: ${entry.establishDate}，预计每股收益: ${entry.epsForecast}，当前市值: ${entry.marketCap}。`,
                 start: start,
                 startInputType: 'utc', // 时区会有误差，但可以接受
                 status: 'CONFIRMED',
@@ -25,7 +27,7 @@ async function generateEarningsICSCalendar() {
 
         const headerAttributes = {
             productId: 'Jason\'s Earnings Calendar',
-            calName: 'Earnings Calendar for S&P 500 Companies',
+            calName: 'Earnings Calendar 财报日历',
             method: 'PUBLISH',
         };
 
@@ -42,6 +44,6 @@ async function generateEarningsICSCalendar() {
     }
 }
 
-// generateEarningsICSCalendar();
+generateEarningsICSCalendar();
 
 export { generateEarningsICSCalendar };
