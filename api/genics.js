@@ -15,7 +15,6 @@ async function generateEarningsICSCalendar() {
                 description: `代码：${entry.symbol}，公司：${entry.companyName}，行业: ${entry.industry}，成立日期: ${entry.establishDate}，预计每股收益: ${entry.epsEstimate}，实际每股收益: ${entry.epsActual}，预计营收: ${entry.revenueEstimate}，实际营收: ${entry.revenueActual}。`,
                 start: start,
                 startInputType: 'utc', // 时区会有误差，但可以接受
-                duration: { hours: 1 }, // 假设每个事件持续1小时
                 status: 'CONFIRMED',
                 busyStatus: 'FREE',
                 alarms: [
@@ -35,14 +34,14 @@ async function generateEarningsICSCalendar() {
                 console.error(error);
                 return;
             }
-            writeFileSync('./ics/sp500.ics', value);
-            console.log('Earnings calendar .ics file has been saved to ./ics/sp500.ics.');
+            writeFileSync('./ics/sp.ics', value);
+            console.log('Earnings calendar .ics file has been saved to ./ics/sp.ics.');
         });
     } catch (error) {
         console.error('Error generating earnings ICS calendar:', error);
     }
 }
 
-// generateEarningsICSCalendar();
+generateEarningsICSCalendar();
 
 export { generateEarningsICSCalendar };
