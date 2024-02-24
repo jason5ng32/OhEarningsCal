@@ -11,16 +11,16 @@ function sleep(ms) {
 }
 
 // 日期 + 1 天
-function addOneDay(date) {
+function addOneDay(date, days = 1) {
     const newDate = new Date(date);
-    newDate.setDate(newDate.getDate() + 1);
+    newDate.setDate(newDate.getDate() + days);
     return newDate.toISOString().split('T')[0];
 }
 
 // 日期 -1 天
-function minusOneDay(date) {
+function minusOneDay(date, days = 1) {
     const newDate = new Date(date);
-    newDate.setDate(newDate.getDate() - 1);
+    newDate.setDate(newDate.getDate() - days);
     return newDate.toISOString().split('T')[0];
 }
 
@@ -77,7 +77,6 @@ async function fetchEarningsData(date) {
 
     // 转换日期格式
     _date = extractDateSimple(_date);
-    console.log('fetched date', _date);
 
     return {
         date: _date,
@@ -86,12 +85,11 @@ async function fetchEarningsData(date) {
 };
 
 // 过滤数据
-
 function filterData(earnings, stocklist) {
-    // 首先检查 earnings 和 earnings.data 是否存在
+
     if (!earnings.data) {
-        console.error(earnings.date, 'earnings.data is null or undefined');
-        return []; // 返回一个空数组或根据需要进行其他处理
+        console.error(earnings.date, ': No earnings data found.');
+        return []; // 返回一个空数组避免后续处理出错
     }
 
     // 将 stocklist 转换为以 symbol 为键的对象，便于查找
@@ -125,9 +123,9 @@ function filterData(earnings, stocklist) {
         noOfEsts: earning.noOfEsts ? earning.noOfEsts : '',
 
         // 选择从 stockMap 中来的字段
-        companyName: stockMap[earning.symbol].companyName,
-        industry: stockMap[earning.symbol].industry,
-        establishDate: stockMap[earning.symbol].establishDate
+        companyName: stockMap[earning.symbol].companyName? stockMap[earning.symbol].companyName : earning.name? earning.name : 'N/A',
+        industry: stockMap[earning.symbol].industry? stockMap[earning.symbol].industry : 'N/A',
+        establishDate: stockMap[earning.symbol].establishDate? stockMap[earning.symbol].establishDate : 'N/A',
     }));
 }
 
@@ -145,21 +143,19 @@ function formatData(datas) {
 }
 
 
-// 创建 HTTP 请求处理函数
+// 获取财报日历数据
 async function fetchEarningsCalendarData(date) {
     try {
         let beforeDays = 8;
-        let days = 25;
-        let plusDate = addOneDay(date);
-        let minusDate = date;
+        let alfterDays = 30;
+        let newDate = date;
         let datas = [];
 
-        // 前 8 天数据(包括当天)
-        const beforeDatas = await getBeforeDatas(minusDate, beforeDays);
-        datas = datas.concat(beforeDatas);
+        // 将日期重置为 beforeDays 天前
+        newDate = minusOneDay(date, beforeDays);
 
         // 后续数据
-        const afterDatas = await getAfterDatas(plusDate, days);
+        const afterDatas = await getAfterDatas(newDate, alfterDays);
         datas = datas.concat(afterDatas);
 
         datas = formatData(datas);
@@ -170,20 +166,7 @@ async function fetchEarningsCalendarData(date) {
     }
 }
 
-async function getBeforeDatas(minusDate, beforeDays) {
-    let datas = [];
-    for (let i = 0; i < beforeDays; i++) {
-        let data = await fetchEarningsData(minusDate);
-        data = filterData(data, combinelist);
-        await sleep(50);
-        if (data.data !== null) {
-            datas.push(data);
-        }
-        minusDate = minusOneDay(minusDate);
-    }
-    return datas;
-}
-
+// 获取数据并合并
 async function getAfterDatas(plusDate, days) {
     let datas = [];
     for (let i = 0; i < days; i++) {
@@ -192,12 +175,14 @@ async function getAfterDatas(plusDate, days) {
         await sleep(50);
         if (data.data !== null) {
             datas.push(data);
+            console.log('fetching date', plusDate, 'done');
         }
         plusDate = addOneDay(plusDate);
     }
     return datas;
 };
 
+// 创建 HTTP 请求处理函数
 async function getEarningCal(req, res) {
     try {
         let date = req.query.date;
@@ -209,6 +194,5 @@ async function getEarningCal(req, res) {
     }
 }
 
-
+// 导出一个 HTTP 请求处理函数和一个数据获取函数
 export { getEarningCal,fetchEarningsCalendarData };
-

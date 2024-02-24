@@ -10,12 +10,14 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT || 18302;
 
-const staticApp = express.static('ics');
-
-app.get('/api/cal', getEarningCalendar);
-app.use('/api/cal2', getEarningCal);
+// 使用 finnhub API 获取财报日历
+app.get('/api/finnhub', getEarningCalendar);
+// 使用 nasdaq API 获取财报日历
+app.use('/api/nasdaq', getEarningCal);
+// 静态文件服务器
 app.use('/ics', express.static('ics'));
 
+// 每天 21:58 生成财报日历
 schedule.scheduleJob('58 21 * * *', function () {
     console.log("Generating earnings calendar...");
     generateEarningsICSCalendar();
