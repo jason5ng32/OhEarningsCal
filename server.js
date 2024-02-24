@@ -1,7 +1,6 @@
 import schedule from 'node-schedule';
 import dotenv from 'dotenv';
 import express from 'express';
-import { getEarningCalendar } from './api/finnhub.js';
 import { getEarningCal } from './api/nasdaq.js';
 import { generateEarningsICSCalendar } from './api/genics.js';
 
@@ -10,8 +9,6 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT || 18302;
 
-// 使用 finnhub API 获取财报日历
-app.get('/api/finnhub', getEarningCalendar);
 // 使用 nasdaq API 获取财报日历
 app.use('/api/nasdaq', getEarningCal);
 // 静态文件服务器
