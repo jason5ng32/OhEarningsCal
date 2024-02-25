@@ -2,7 +2,7 @@ name: Get Earnings Calendar Data
 
 on:
   schedule:
-    - cron: '*/30 * * * *'
+    - cron: '*/5 * * * *'
 
 jobs:
   run-scripts:
@@ -10,6 +10,11 @@ jobs:
     environment: OhEarningCal
     steps:
     - uses: actions/checkout@v2
+
+    - name: Reset local changes
+      run: |
+        git fetch origin main
+        git reset --hard origin/main
 
     - name: Set up Node.js
       uses: actions/setup-node@v2
@@ -22,8 +27,8 @@ jobs:
     - name: Run fetchEarningsCalendarData script
       run: node ./api/github_get.js
       env:
-        SHOULD_GEN_SELECTED: ${{ secrets.SHOULD_GEN_SELECTED }}
-        SHOULD_GEN_ALL: ${{ secrets.SHOULD_GEN_ALL }}
+        SHOULD_GEN_SELECTED: ${{ vars.SHOULD_GEN_SELECTED }}
+        SHOULD_GEN_ALL: ${{ vars.SHOULD_GEN_ALL }}
 
     - name: Commit files
       run: |
