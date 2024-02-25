@@ -1,12 +1,12 @@
 import { createEvents } from 'ics';
 import { writeFileSync } from 'fs';
-import { fetchEarningsCalendarData } from './nasdaq.js';
+import { processData } from './processdata.js';
 
-async function generateEarningsICSCalendar() {
+async function generateEarningsICSCalendar(date,list,filename) {
     try {
-        const date = `${new Date().getFullYear()}-${(new Date().getMonth() + 1).toString().padStart(2, '0')}-${new Date().getDate().toString().padStart(2, '0')}`;
+        
         console.log('Generating earnings calendar for', date);
-        const earningsData = await fetchEarningsCalendarData(date); // 获取财报数据
+        const earningsData = await processData(date,list); // 获取财报数据
 
         const events = earningsData.map(entry => {
             const dateParts = entry.date.split('-').map(Number);
@@ -25,7 +25,7 @@ async function generateEarningsICSCalendar() {
         });
 
         const headerAttributes = {
-            productId: 'Jason\'s Earnings Calendar',
+            productId: `${filename} Earnings Calendar`,
             calName: 'Earnings Calendar 财报日历',
             method: 'PUBLISH',
         };
@@ -35,8 +35,8 @@ async function generateEarningsICSCalendar() {
                 console.error(error);
                 return;
             }
-            writeFileSync('./ics/selected.ics', value);
-            console.log('Earnings calendar .ics file has been saved to ./ics/selected.ics.');
+            writeFileSync(`./docs/ics/${filename}.ics`, value);
+            console.log(`Earnings calendar .ics file has been saved to ./docs/ics/${filename}.ics.`);
         });
     } catch (error) {
         console.error('Error generating earnings ICS calendar:', error);
