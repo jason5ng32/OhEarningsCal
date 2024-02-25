@@ -2,14 +2,14 @@ name: Get Earnings Calendar Data
 
 on:
   schedule:
-    - cron: '*/30 * * * *'
+    - cron: '*/5 * * * *'
 
 jobs:
   run-scripts:
     runs-on: ubuntu-latest
     environment: OhEarningCal
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
 
     - name: Reset local changes
       run: |
@@ -17,9 +17,9 @@ jobs:
         git reset --hard origin/main
 
     - name: Set up Node.js
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v3
       with:
-        node-version: '20.10.0'
+        node-version: '20'
 
     - name: Install dependencies
       run: npm install
