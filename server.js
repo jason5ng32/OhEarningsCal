@@ -9,6 +9,8 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT || 18302;
 
+// 静态文件
+app.use('/', express.static('./docs'));
 
 // 计划任务
 schedule.scheduleJob('17 18 * * *', function () {

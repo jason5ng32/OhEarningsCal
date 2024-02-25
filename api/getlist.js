@@ -18,7 +18,6 @@ async function getdata() {
         data[filename] = readFileSync(`./api/datas/${filename}.json`, 'utf8');
         data[filename] = JSON.parse(data[filename]);
     }
-    writeFileSync('./api/datas.json', JSON.stringify(data, null, 2));
     return data;
     
 };
