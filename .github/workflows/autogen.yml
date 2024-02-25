@@ -2,7 +2,7 @@ name: Run Node.js Scripts
 
 on:
   schedule:
-    - cron: '10 11 * * *'
+    - cron: '16 11 * * *'
 
 jobs:
   run-scripts:
@@ -19,8 +19,8 @@ jobs:
     - name: Install dependencies
       run: npm install
 
-    - name: Run fetchEarningsCalendarData script
-      run: node ./api/github_get.js
+    - name: Run genAllIcs script
+      run: node ./api/github_gen.js
       env:
         SHOULD_GEN_SELECTED: ${{ secrets.SHOULD_GEN_SELECTED }}
         SHOULD_GEN_ALL: ${{ secrets.SHOULD_GEN_ALL }}
