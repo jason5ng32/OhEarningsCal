@@ -1,0 +1,34 @@
+name: Run Node.js Scripts
+
+on:
+  schedule:
+    - cron: '05 11 * * *'
+
+jobs:
+  run-scripts:
+    runs-on: ubuntu-latest
+    environment: OhEarningCal
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '20.10.0'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Run fetchEarningsCalendarData script
+      run: node ./api/github_get.js
+      env:
+        SHOULD_GEN_SELECTED: ${{ secrets.SHOULD_GEN_SELECTED }}
+        SHOULD_GEN_ALL: ${{ secrets.SHOULD_GEN_ALL }}
+
+    - name: Commit files
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add -A
+        git commit -m "Update earnings calendar files" -a || echo "No changes to commit"
+        git push
