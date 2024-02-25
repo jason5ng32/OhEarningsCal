@@ -2,8 +2,8 @@ name: Generate ics files
 
 on:
   schedule:
-    - cron: '0 6 * * *'
-    - cron: '0 18 * * *'
+    - cron: '*/7 * * * *'
+    # - cron: '0 18 * * *'
 
 jobs:
   run-scripts:
@@ -18,7 +18,7 @@ jobs:
         git reset --hard origin/main
 
     - name: Set up Node.js
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v4
       with:
         node-version: '20'
 
@@ -36,6 +36,7 @@ jobs:
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git add -A
-        git commit -m "Auto generated ics files" -a || echo "No changes to commit"
+        CURRENT_DATE=$(date +"%Y-%m-%d")
+        git commit -m "Auto generated ics - $CURRENT_DATE" -a || echo "No changes to commit"
         git push --force
 

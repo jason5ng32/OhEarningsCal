@@ -2,8 +2,8 @@ name: Get Earnings Calendar Data
 
 on:
   schedule:
-    - cron: '0 5 * * *'
-    - cron: '0 17 * * *'
+    - cron: '*/5 * * * *'
+    # - cron: '0 17 * * *'
 
 jobs:
   run-scripts:
@@ -18,7 +18,7 @@ jobs:
         git reset --hard origin/main
 
     - name: Set up Node.js
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v4
       with:
         node-version: '20'
 
@@ -36,5 +36,6 @@ jobs:
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git add -A
-        git commit -m "Auto update earnings calendar files" -a || echo "No changes to commit"
+        CURRENT_DATE=$(date +"%Y-%m-%d")
+        git commit -m "Auto update earnings files - $CURRENT_DATE" -a || echo "No changes to commit"
         git push --force
