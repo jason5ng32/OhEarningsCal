@@ -1,4 +1,4 @@
-import { read, readFileSync, readdirSync, writeFileSync } from 'fs';
+import { readFileSync, readdirSync } from 'fs';
 
 // 从 ./datas/ 目录下检索所有 json 文件名称，并导入为变量
 async function getlist() {
