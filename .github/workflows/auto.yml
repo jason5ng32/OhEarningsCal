@@ -3,6 +3,7 @@ name: Auto Updater
 on:
   schedule:
     - cron: '34 4,16 * * *' # every day at 4:34 and 16:34
+  workflow_dispatch:
 
 jobs:
   run-scripts:
