@@ -2,7 +2,7 @@ name: Auto Updater
 
 on:
   schedule:
-    - cron: '*/6 * * * *'
+    - cron: '* */12 * * *' # every 12 hours
 
 jobs:
   run-scripts:
@@ -45,5 +45,5 @@ jobs:
         git config --local user.name "GitHub Action"
         git add -A
         CURRENT_DATE=$(date +"%Y-%m-%d")
-        git commit -m "Bot Auto update - $CURRENT_DATE" -a || echo "No changes to commit"
+        git commit -m "Bot auto update - $CURRENT_DATE" -a || echo "No changes to commit"
         git push --force
