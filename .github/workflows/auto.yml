@@ -1,8 +1,8 @@
-name: Generate ics files
+name: Auto Updater
 
 on:
   schedule:
-    - cron: '*/37 * * * *'
+    - cron: '*/6 * * * *'
 
 jobs:
   run-scripts:
@@ -24,6 +24,15 @@ jobs:
     - name: Install dependencies
       run: npm install
 
+    - name: Run fetchEarningsCalendarData script
+      run: node ./api/github_get.js
+      env:
+        SHOULD_GEN_SELECTED: ${{ vars.SHOULD_GEN_SELECTED }}
+        SHOULD_GEN_ALL: ${{ vars.SHOULD_GEN_ALL }}
+
+    - name: Waiting for 10 seconds
+      run: sleep 10
+
     - name: Run genAllIcs script
       run: node ./api/github_gen.js
       env:
@@ -36,6 +45,5 @@ jobs:
         git config --local user.name "GitHub Action"
         git add -A
         CURRENT_DATE=$(date +"%Y-%m-%d")
-        git commit -m "Auto generated ics - $CURRENT_DATE" -a || echo "No changes to commit"
+        git commit -m "Bot Auto update - $CURRENT_DATE" -a || echo "No changes to commit"
         git push --force
-
