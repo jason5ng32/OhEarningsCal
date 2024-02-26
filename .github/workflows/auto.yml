@@ -2,7 +2,8 @@ name: Auto Updater
 
 on:
   schedule:
-    - cron: '* */8 * * *' # every 8 hours
+    - cron: '30 4 * * *' # 4:30 AM UTC every day
+    - cron: '30 16 * * *' # 4:30 PM UTC every day
 
 jobs:
   run-scripts:
