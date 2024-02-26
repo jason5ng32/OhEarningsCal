@@ -2,8 +2,7 @@ name: Get Earnings Calendar Data
 
 on:
   schedule:
-    - cron: '0 3 * * *'
-    - cron: '0 15 * * *'
+    - cron: '*/30 * * * *'
 
 jobs:
   run-scripts:
