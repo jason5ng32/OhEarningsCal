@@ -8,7 +8,7 @@ on:
 jobs:
   run-scripts:
     runs-on: ubuntu-latest
-    environment: OhEarningCal
+    environment: OhEarningsCal
     steps:
     - uses: actions/checkout@v4
 

@@ -1,4 +1,4 @@
-# OhEarningCal
+# OhEarningsCal
 
 这个项目本来是我自用的一个小工具，功能是，将我关注的美股公司的财报日程，自动导入到我的日历（比如 Google Calendar）中。
 
