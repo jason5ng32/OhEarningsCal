@@ -2,8 +2,8 @@ name: Generate ics files
 
 on:
   schedule:
-    - cron: '10 3 * * *'
-    - cron: '10 15 * * *'
+    - cron: '20 3 * * *'
+    - cron: '20 15 * * *'
 
 jobs:
   run-scripts:
