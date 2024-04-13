@@ -2,9 +2,9 @@
   "date": "2024-04-12",
   "data": [
     {
-      "lastYearRptDt": "4/14/2023",
-      "lastYearEPS": "$4.10",
-      "time": "time-pre-market",
+      "eps": "$4.63",
+      "surprise": "10.77",
+      "time": "time-not-supplied",
       "symbol": "JPM",
       "name": "J P Morgan Chase & Co",
       "marketCap": "$562,911,001,854",
@@ -13,20 +13,20 @@
       "noOfEsts": "9"
     },
     {
-      "lastYearRptDt": "4/14/2023",
-      "lastYearEPS": "$1.23",
-      "time": "time-pre-market",
+      "eps": "$1.26",
+      "surprise": "14.55",
+      "time": "time-not-supplied",
       "symbol": "WFC",
       "name": "Wells Fargo & Company",
       "marketCap": "$202,805,271,391",
       "fiscalQuarterEnding": "Mar/2024",
-      "epsForecast": "$1.09",
+      "epsForecast": "$1.10",
       "noOfEsts": "7"
     },
     {
-      "lastYearRptDt": "4/13/2023",
-      "lastYearEPS": "$0.65",
-      "time": "time-pre-market",
+      "eps": "$3.73",
+      "surprise": "16.56",
+      "time": "time-not-supplied",
       "symbol": "PGR",
       "name": "Progressive Corporation (The)",
       "marketCap": "$118,459,123,868",
@@ -35,9 +35,9 @@
       "noOfEsts": "10"
     },
     {
-      "lastYearRptDt": "4/14/2023",
-      "lastYearEPS": "$7.93",
-      "time": "time-pre-market",
+      "eps": "$9.81",
+      "surprise": "4.14",
+      "time": "time-not-supplied",
       "symbol": "BLK",
       "name": "BlackRock, Inc.",
       "marketCap": "$117,062,840,226",
@@ -46,9 +46,9 @@
       "noOfEsts": "6"
     },
     {
-      "lastYearRptDt": "4/14/2023",
-      "lastYearEPS": "$1.86",
-      "time": "time-pre-market",
+      "eps": "$1.58",
+      "surprise": "22.48",
+      "time": "time-not-supplied",
       "symbol": "C",
       "name": "Citigroup Inc.",
       "marketCap": "$116,039,077,395",
@@ -57,9 +57,9 @@
       "noOfEsts": "4"
     },
     {
-      "lastYearRptDt": "4/17/2023",
-      "lastYearEPS": "$1.52",
-      "time": "time-pre-market",
+      "eps": "$1.69",
+      "surprise": "14.19",
+      "time": "time-not-supplied",
       "symbol": "STT",
       "name": "State Street Corporation",
       "marketCap": "$22,316,649,332",
@@ -68,9 +68,20 @@
       "noOfEsts": "7"
     },
     {
-      "lastYearRptDt": "4/27/2023",
-      "lastYearEPS": "$1.04",
-      "time": "time-pre-market",
+      "eps": "$0.93",
+      "surprise": "2.2",
+      "time": "time-not-supplied",
+      "symbol": "UNTY",
+      "name": "Unity Bancorp, Inc.",
+      "marketCap": "$263,667,222",
+      "fiscalQuarterEnding": "Mar/2024",
+      "epsForecast": "$0.91",
+      "noOfEsts": "2"
+    },
+    {
+      "eps": "$1.21",
+      "surprise": "16.35",
+      "time": "time-not-supplied",
       "symbol": "BSVN",
       "name": "Bank7 Corp.",
       "marketCap": "$248,877,269",
@@ -79,8 +90,19 @@
       "noOfEsts": "1"
     },
     {
-      "lastYearRptDt": "N/A",
-      "lastYearEPS": "($0.12)",
+      "eps": "($0.14)",
+      "surprise": "-7.68",
+      "time": "time-not-supplied",
+      "symbol": "VIRC",
+      "name": "Virco Manufacturing Corporation",
+      "marketCap": "$182,599,497",
+      "fiscalQuarterEnding": "Jan/2024",
+      "epsForecast": "($0.13)",
+      "noOfEsts": "1"
+    },
+    {
+      "eps": "($0.12)",
+      "surprise": "N/A",
       "time": "time-not-supplied",
       "symbol": "BMRA",
       "name": "Biomerica, Inc.",
@@ -90,8 +112,8 @@
       "noOfEsts": "6"
     },
     {
-      "lastYearRptDt": "N/A",
-      "lastYearEPS": "($12.71)",
+      "eps": "($12.71)",
+      "surprise": "N/A",
       "time": "time-not-supplied",
       "symbol": "PIXY",
       "name": "ShiftPixy, Inc.",
@@ -99,6 +121,17 @@
       "fiscalQuarterEnding": "Feb/2024",
       "epsForecast": "",
       "noOfEsts": "6"
+    },
+    {
+      "eps": "($0.78)",
+      "surprise": "N/A",
+      "time": "time-not-supplied",
+      "symbol": "ASLN",
+      "name": "ASLAN Pharmaceuticals Limited",
+      "marketCap": "$8,861,334",
+      "fiscalQuarterEnding": "Dec/2023",
+      "epsForecast": "",
+      "noOfEsts": "N/A"
     }
   ]
 }
