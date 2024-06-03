@@ -1,5 +1,7 @@
 # OhEarningsCal
 
+<a href="https://trendshift.io/repositories/8148" target="_blank"><img src="https://trendshift.io/api/badge/repositories/8148" alt="jason5ng32%2FOhEarningsCal | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
+
 这个项目本来是我自用的一个小工具，功能是，将我关注的美股公司的财报日程，自动导入到我的日历（比如 Google Calendar）中。
 
 啊，我就是不喜欢打开炒股 app 看，我就是喜欢在日历中看。
