@@ -6,25 +6,9 @@ METHOD:PUBLISH
 X-WR-CALNAME:Earnings Calendar 财报日历
 X-PUBLISHED-TTL:PT1H
 BEGIN:VEVENT
-UID:oiCSXXEcxJFCTCd_aqC0x
-SUMMARY:思科系统 发布财报
-DTSTAMP:20240614T164234Z
-DTSTART;VALUE=DATE:20240515
-DESCRIPTION:财务季度：Apr/2024。\n代码：CSCO，公司：思科系统，行业: 计算机网络。\n预计每股收益: $0.70，当前市值:
-	 $198\,207\,707\,566。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=CSCO \
-	n在富途查看：https://www.futunn.com/hk/stock/CSCO-US 
-STATUS:CONFIRMED
-X-MICROSOFT-CDO-BUSYSTATUS:FREE
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Reminder
-TRIGGER:-PT2H
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:bcv1N0BC7g4RgQHTkUxzA
+UID:ji98wQovCiHOof_6mkKhH
 SUMMARY:沃尔玛 发布财报
-DTSTAMP:20240614T164234Z
+DTSTAMP:20240615T044238Z
 DTSTART;VALUE=DATE:20240516
 DESCRIPTION:财务季度：Apr/2024。\n代码：WMT，公司：沃尔玛，行业: 零售。\n预计每股收益: $0.52，当前市值: $515
 	\,795\,695\,622。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=WMT \n在富途查看
@@ -38,9 +22,9 @@ TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:L85blSv6NwPvAgbyL5JlD
+UID:TZtg1ucZ05TDpfoMtknJG
 SUMMARY:赛富时 发布财报
-DTSTAMP:20240614T164234Z
+DTSTAMP:20240615T044238Z
 DTSTART;VALUE=DATE:20240529
 DESCRIPTION:财务季度：Apr/2024。\n代码：CRM，公司：赛富时，行业: 云端服务。\n预计每股收益: $1.82，当前市值: $2
 	61\,735\,100\,000。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=CRM \n在富途
@@ -54,9 +38,9 @@ TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:a52tE3mCuErHq-yR2egW0
+UID:zlX-l6z_73dyJqGTafStI
 SUMMARY:耐克 盘后发布财报
-DTSTAMP:20240614T164234Z
+DTSTAMP:20240615T044238Z
 DTSTART;VALUE=DATE:20240627
 DESCRIPTION:财务季度：May/2024。\n代码：NKE，公司：耐克，行业: 服装。\n预计每股收益: $0.86，当前市值: $142\
 	,151\,412\,443。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=NKE \n在富途查看：
@@ -70,9 +54,9 @@ TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:Axs38DZ9tMdbBW_XN0fkk
+UID:5Y2fJFmYGQS1r9BSAkQg-
 SUMMARY:沃尔格林博姿联合公司 盘前发布财报
-DTSTAMP:20240614T164234Z
+DTSTAMP:20240615T044238Z
 DTSTART;VALUE=DATE:20240627
 DESCRIPTION:财务季度：May/2024。\n代码：WBA，公司：沃尔格林博姿联合公司，行业: 零售。\n预计每股收益: $0.68，当前市
 	值: $13\,328\,921\,504。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=WBA \
@@ -86,9 +70,9 @@ TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:Bewfgsy7g07stRC5j6iJ2
+UID:dtqNhRmIH5sVazfaqxW65
 SUMMARY:摩根大通 盘前发布财报
-DTSTAMP:20240614T164234Z
+DTSTAMP:20240615T044238Z
 DTSTART;VALUE=DATE:20240712
 DESCRIPTION:财务季度：Jun/2024。\n代码：JPM，公司：摩根大通，行业: 银行。\n预计每股收益: $4.17，当前市值: $55
 	6\,127\,201\,447。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=JPM \n在富途查
@@ -102,9 +86,9 @@ TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:SBKM6F2LNTi-pvBDcn5K2
+UID:aDBk4wh1O8bPWbGKTSetU
 SUMMARY:联合健康保险 发布财报
-DTSTAMP:20240614T164234Z
+DTSTAMP:20240615T044238Z
 DTSTART;VALUE=DATE:20240712
 DESCRIPTION:财务季度：Jun/2024。\n代码：UNH，公司：联合健康保险，行业: 保健管理。\n预计每股收益: $6.70，当前市值:
 	 $457\,707\,497\,797。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=UNH \n
