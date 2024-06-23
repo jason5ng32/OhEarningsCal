@@ -6,9 +6,9 @@ METHOD:PUBLISH
 X-WR-CALNAME:Earnings Calendar 财报日历
 X-PUBLISHED-TTL:PT1H
 BEGIN:VEVENT
-UID:-FFHZL_Mxa5J28_JMi6MK
+UID:kC1MjxviuwrvQiUxoXJ5F
 SUMMARY:赛富时 发布财报
-DTSTAMP:20240622T164205Z
+DTSTAMP:20240623T044209Z
 DTSTART;VALUE=DATE:20240529
 DESCRIPTION:财务季度：Apr/2024。\n代码：CRM，公司：赛富时，行业: 云端服务。\n预计每股收益: $1.82，当前市值: $2
 	61\,735\,100\,000。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=CRM \n在富途
@@ -22,9 +22,9 @@ TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:zle3QGGLQZFswMWkJHIuj
+UID:Iw_E8WBmVmzQjB-89MNm4
 SUMMARY:耐克 盘后发布财报
-DTSTAMP:20240622T164205Z
+DTSTAMP:20240623T044209Z
 DTSTART;VALUE=DATE:20240627
 DESCRIPTION:财务季度：May/2024。\n代码：NKE，公司：耐克，行业: 服装。\n预计每股收益: $0.86，当前市值: $144\
 	,249\,421\,184。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=NKE \n在富途查看：
@@ -38,9 +38,9 @@ TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:NJzkEGMb-uBodyz6ailQ2
+UID:GGVElFAqAgnX29rVXxKhF
 SUMMARY:沃尔格林博姿联合公司 盘前发布财报
-DTSTAMP:20240622T164205Z
+DTSTAMP:20240623T044209Z
 DTSTART;VALUE=DATE:20240627
 DESCRIPTION:财务季度：May/2024。\n代码：WBA，公司：沃尔格林博姿联合公司，行业: 零售。\n预计每股收益: $0.68，当前市
 	值: $13\,691\,261\,118。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=WBA \
@@ -54,9 +54,9 @@ TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:zPMnhh--sVPP551SBz3RC
+UID:4nRrzasxjE2Fv-HElhWIA
 SUMMARY:摩根大通 盘前发布财报
-DTSTAMP:20240622T164205Z
+DTSTAMP:20240623T044209Z
 DTSTART;VALUE=DATE:20240712
 DESCRIPTION:财务季度：Jun/2024。\n代码：JPM，公司：摩根大通，行业: 银行。\n预计每股收益: $4.17，当前市值: $57
 	0\,514\,257\,520。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=JPM \n在富途查
@@ -70,9 +70,9 @@ TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:2uU8D8lYPB_gy8lqU8rwY
+UID:WDYOTNT6CtDqdmqKiH2xs
 SUMMARY:高盛 盘前发布财报
-DTSTAMP:20240622T164205Z
+DTSTAMP:20240623T044209Z
 DTSTART;VALUE=DATE:20240715
 DESCRIPTION:财务季度：Jun/2024。\n代码：GS，公司：高盛，行业: 银行、金融服务。\n预计每股收益: $8.87，当前市值: $
 	147\,704\,404\,800。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=GS \n在富途
@@ -86,9 +86,9 @@ TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:yUaGAcugZz_L2nmxNiGxt
+UID:i1Wv26nK6R9QWzA5uoohQ
 SUMMARY:联合健康保险 盘前发布财报
-DTSTAMP:20240622T164205Z
+DTSTAMP:20240623T044209Z
 DTSTART;VALUE=DATE:20240716
 DESCRIPTION:财务季度：Jun/2024。\n代码：UNH，公司：联合健康保险，行业: 保健管理。\n预计每股收益: $6.70，当前市值:
 	 $445\,944\,976\,539。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=UNH \n
@@ -102,9 +102,9 @@ TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:QKu6I_OO5fJJbXyrhQU75
+UID:LZc4YDtpteBeDOqadeMZy
 SUMMARY:强生 盘前发布财报
-DTSTAMP:20240622T164205Z
+DTSTAMP:20240623T044209Z
 DTSTART;VALUE=DATE:20240717
 DESCRIPTION:财务季度：Jun/2024。\n代码：JNJ，公司：强生，行业: 制药。\n预计每股收益: $2.73，当前市值: $355\
 	,659\,049\,663。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=JNJ \n在富途查看：
@@ -118,9 +118,9 @@ TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:KEF2g_ttOxxZGdOEgIYCq
+UID:X3P1lsFXykuKgSu__X2j_
 SUMMARY:美国运通 盘前发布财报
-DTSTAMP:20240622T164205Z
+DTSTAMP:20240623T044209Z
 DTSTART;VALUE=DATE:20240719
 DESCRIPTION:财务季度：Jun/2024。\n代码：AXP，公司：美国运通，行业: 金融服务。\n预计每股收益: $3.22，当前市值: $
 	165\,590\,755\,831。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=AXP \n在富
@@ -134,13 +134,29 @@ TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:9wMvviIWAXKFGe_hhbkYh
+UID:wf_wl806uXLlhDtGNnEfD
 SUMMARY:旅行者保险 盘前发布财报
-DTSTAMP:20240622T164205Z
+DTSTAMP:20240623T044209Z
 DTSTART;VALUE=DATE:20240719
 DESCRIPTION:财务季度：Jun/2024。\n代码：TRV，公司：旅行者保险，行业: 保险。\n预计每股收益: $3.16，当前市值: $4
 	8\,539\,729\,302。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=TRV \n在富途查
 	看：https://www.futunn.com/hk/stock/TRV-US 
+STATUS:CONFIRMED
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:vNbjCycG9EO_kGiQQSgB-
+SUMMARY:威瑞森 盘前发布财报
+DTSTAMP:20240623T044209Z
+DTSTART;VALUE=DATE:20240722
+DESCRIPTION:财务季度：Jun/2024。\n代码：VZ，公司：威瑞森，行业: 电信。\n预计每股收益: $1.15，当前市值: $169\
+	,380\,416\,934。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=VZ \n在富途查看：h
+	ttps://www.futunn.com/hk/stock/VZ-US 
 STATUS:CONFIRMED
 X-MICROSOFT-CDO-BUSYSTATUS:FREE
 BEGIN:VALARM
