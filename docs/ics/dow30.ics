@@ -6,25 +6,9 @@ METHOD:PUBLISH
 X-WR-CALNAME:Earnings Calendar 财报日历
 X-PUBLISHED-TTL:PT1H
 BEGIN:VEVENT
-UID:9ZHWvy7yo7-xIY1wrcJr2
-SUMMARY:麦当劳 发布财报
-DTSTAMP:20240828T164046Z
-DTSTART;VALUE=DATE:20240729
-DESCRIPTION:财务季度：Jun/2024。\n代码：MCD，公司：麦当劳，行业: 快餐。\n预计每股收益: $3.08，当前市值: $188
-	\,400\,598\,511。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=MCD \n在富途查看
-	：https://www.futunn.com/hk/stock/MCD-US 
-STATUS:CONFIRMED
-X-MICROSOFT-CDO-BUSYSTATUS:FREE
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Reminder
-TRIGGER:-PT2H
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:TmcW-_0ONYhbe9KJZFrX7
+UID:UttyhCmiPSQ4m77yyPfP0
 SUMMARY:微软 发布财报
-DTSTAMP:20240828T164046Z
+DTSTAMP:20240829T043833Z
 DTSTART;VALUE=DATE:20240730
 DESCRIPTION:财务季度：Jun/2024。\n代码：MSFT，公司：微软，行业: 软件。\n预计每股收益: $2.90，当前市值: $3\,
 	143\,270\,766\,398。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=MSFT \n在
@@ -38,9 +22,9 @@ TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:lbu2Anc1yg4eMGsjYU7O-
+UID:OoFEReNAKoyVNvGRQgz-n
 SUMMARY:宝洁 发布财报
-DTSTAMP:20240828T164046Z
+DTSTAMP:20240829T043833Z
 DTSTART;VALUE=DATE:20240730
 DESCRIPTION:财务季度：Jun/2024。\n代码：PG，公司：宝洁，行业: 消费品。\n预计每股收益: $1.37，当前市值: $381\
 	,633\,875\,099。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=PG \n在富途查看：h
@@ -54,9 +38,9 @@ TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:o-YrXk_tSnEgoGdXo8nLY
+UID:U24FBqlZpF0dai5Cj6D5r
 SUMMARY:默克药厂 发布财报
-DTSTAMP:20240828T164046Z
+DTSTAMP:20240829T043833Z
 DTSTART;VALUE=DATE:20240730
 DESCRIPTION:财务季度：Jun/2024。\n代码：MRK，公司：默克药厂，行业: 制药。\n预计每股收益: $2.16，当前市值: $29
 	1\,905\,926\,881。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=MRK \n在富途查
@@ -70,9 +54,9 @@ TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:4w5oB3_nNBwN62GRb2FmH
+UID:zliPi5w6TafgM5095CdDk
 SUMMARY:波音 盘前发布财报
-DTSTAMP:20240828T164046Z
+DTSTAMP:20240829T043833Z
 DTSTART;VALUE=DATE:20240731
 DESCRIPTION:财务季度：Jun/2024。\n代码：BA，公司：波音，行业: 航空制造及国防。\n预计每股收益: ($1.68)，当前市值:
 	 $114\,710\,406\,096。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=BA \n在
@@ -86,9 +70,9 @@ TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:NKmbqi3Jva_HGYWCjv64m
+UID:hti-v9ysOLi2oH8biCSIq
 SUMMARY:苹果公司 盘后发布财报
-DTSTAMP:20240828T164046Z
+DTSTAMP:20240829T043833Z
 DTSTART;VALUE=DATE:20240801
 DESCRIPTION:财务季度：Jun/2024。\n代码：AAPL，公司：苹果公司，行业: 消费电子产品。\n预计每股收益: $1.34，当前市值
 	: $3\,405\,392\,930\,560。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=AA
@@ -102,9 +86,9 @@ TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:OG353fxuJwSS1dQmvxVIC
+UID:bYXfjuHEBdZGqVAxrURJN
 SUMMARY:英特尔 盘后发布财报
-DTSTAMP:20240828T164046Z
+DTSTAMP:20240829T043833Z
 DTSTART;VALUE=DATE:20240801
 DESCRIPTION:财务季度：Jun/2024。\n代码：INTC，公司：英特尔，行业: 半导体。\n预计每股收益: ($0.11)，当前市值: 
 	$130\,860\,180\,000。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=INTC \n
@@ -118,9 +102,9 @@ TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:9d0NaHB--L9QMprJG1ccQ
+UID:PrgAtqeoft04BuN8g-JIx
 SUMMARY:雪佛龙 发布财报
-DTSTAMP:20240828T164046Z
+DTSTAMP:20240829T043833Z
 DTSTART;VALUE=DATE:20240802
 DESCRIPTION:财务季度：Jun/2024。\n代码：CVX，公司：雪佛龙，行业: 石油与天然气。\n预计每股收益: $2.88，当前市值: 
 	$281\,890\,518\,616。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=CVX \n在
@@ -134,9 +118,9 @@ TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:928E1YYjsMyTV_3ClS6wx
+UID:RAn3Sh7b5Z9qERETFwVKY
 SUMMARY:安进 发布财报
-DTSTAMP:20240828T164046Z
+DTSTAMP:20240829T043833Z
 DTSTART;VALUE=DATE:20240806
 DESCRIPTION:财务季度：Jun/2024。\n代码：AMGN，公司：安进，行业: 卫生保健。\n预计每股收益: $4.93，当前市值: $1
 	76\,460\,191\,933。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=AMGN \n在富
@@ -150,9 +134,9 @@ TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:fQXUdkN5iAcpJf65N0YNO
+UID:FSfSMLADzwVdENBzIL-oE
 SUMMARY:卡特彼勒 发布财报
-DTSTAMP:20240828T164046Z
+DTSTAMP:20240829T043833Z
 DTSTART;VALUE=DATE:20240806
 DESCRIPTION:财务季度：Jun/2024。\n代码：CAT，公司：卡特彼勒，行业: 建筑及采矿设备。\n预计每股收益: $5.53，当前市值
 	: $159\,718\,252\,004。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=CAT \
@@ -166,9 +150,9 @@ TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:m1C0IPmDzACZ7ZOpLjH8N
+UID:J80smDn6XC7REMM7qHAWu
 SUMMARY:华特迪士尼 盘前发布财报
-DTSTAMP:20240828T164046Z
+DTSTAMP:20240829T043833Z
 DTSTART;VALUE=DATE:20240807
 DESCRIPTION:财务季度：Jun/2024。\n代码：DIS，公司：华特迪士尼，行业: 广播及娱乐。\n预计每股收益: $1.20，当前市值:
 	 $164\,019\,181\,049。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=DIS \n
@@ -182,9 +166,9 @@ TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:NKs63zLrmRLaq20sqt7Kn
+UID:8bbhY-1r11vHFadse_mJ_
 SUMMARY:家得宝 发布财报
-DTSTAMP:20240828T164046Z
+DTSTAMP:20240829T043833Z
 DTSTART;VALUE=DATE:20240813
 DESCRIPTION:财务季度：Jul/2024。\n代码：HD，公司：家得宝，行业: 零售。\n预计每股收益: $4.54，当前市值: $342\
 	,910\,101\,660。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=HD \n在富途查看：h
@@ -198,9 +182,9 @@ TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:xZw2-aX6UXCnWby7FDppU
+UID:O20p7Ue63XVbXz-R2oowc
 SUMMARY:思科系统 发布财报
-DTSTAMP:20240828T164046Z
+DTSTAMP:20240829T043833Z
 DTSTART;VALUE=DATE:20240814
 DESCRIPTION:财务季度：Jul/2024。\n代码：CSCO，公司：思科系统，行业: 计算机网络。\n预计每股收益: $0.70，当前市值:
 	 $183\,069\,343\,421。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=CSCO \
@@ -214,9 +198,9 @@ TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:_pyQmNpfYofWupRfGLv0Y
+UID:Kh-NBQnWYZOLczSs0qtIZ
 SUMMARY:沃尔玛 发布财报
-DTSTAMP:20240828T164046Z
+DTSTAMP:20240829T043833Z
 DTSTART;VALUE=DATE:20240815
 DESCRIPTION:财务季度：Jul/2024。\n代码：WMT，公司：沃尔玛，行业: 零售。\n预计每股收益: $0.65，当前市值: $588
 	\,626\,500\,889。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=WMT \n在富途查看
@@ -230,9 +214,9 @@ TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:wyQd8tTnFpwmcW0c2c0yl
+UID:8x2DNjeLuwsccl2dktyCT
 SUMMARY:赛富时 盘后发布财报
-DTSTAMP:20240828T164046Z
+DTSTAMP:20240829T043833Z
 DTSTART;VALUE=DATE:20240828
 DESCRIPTION:财务季度：Jul/2024。\n代码：CRM，公司：赛富时，行业: 云端服务。\n预计每股收益: $1.73，当前市值: $2
 	57\,056\,320\,000。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=CRM \n在富途
@@ -246,12 +230,12 @@ TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:mDwzlPv4EhRNlz_Sm9cz-
+UID:nFmYN-obRAD70URUHvCz-
 SUMMARY:耐克 发布财报
-DTSTAMP:20240828T164046Z
+DTSTAMP:20240829T043833Z
 DTSTART;VALUE=DATE:20240926
-DESCRIPTION:财务季度：Aug/2024。\n代码：NKE，公司：耐克，行业: 服装。\n预计每股收益: $0.54，当前市值: $126\
-	,365\,971\,800。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=NKE \n在富途查看：
+DESCRIPTION:财务季度：Aug/2024。\n代码：NKE，公司：耐克，行业: 服装。\n预计每股收益: $0.54，当前市值: $127\
+	,880\,324\,333。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=NKE \n在富途查看：
 	https://www.futunn.com/hk/stock/NKE-US 
 STATUS:CONFIRMED
 X-MICROSOFT-CDO-BUSYSTATUS:FREE
