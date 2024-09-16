@@ -6,9 +6,9 @@ METHOD:PUBLISH
 X-WR-CALNAME:Earnings Calendar 财报日历
 X-PUBLISHED-TTL:PT1H
 BEGIN:VEVENT
-UID:fgrAdsbQB-CVziyzgG0zA
+UID:vm5nV5ca-SwDHPx-TkItL
 SUMMARY:赛富时 发布财报
-DTSTAMP:20240916T043937Z
+DTSTAMP:20240916T164137Z
 DTSTART;VALUE=DATE:20240828
 DESCRIPTION:财务季度：Jul/2024。\n代码：CRM，公司：赛富时，行业: 云端服务。\n预计每股收益: $1.73，当前市值: $2
 	50\,874\,100\,000。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=CRM \n在富途
@@ -22,9 +22,9 @@ TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:jdeDhYtk0crqBLL5nuZbb
+UID:aG3RjrLboTh8BKJ0sBCU3
 SUMMARY:耐克 盘后发布财报
-DTSTAMP:20240916T043937Z
+DTSTAMP:20240916T164137Z
 DTSTART;VALUE=DATE:20241001
 DESCRIPTION:财务季度：Aug/2024。\n代码：NKE，公司：耐克，行业: 服装。\n预计每股收益: $0.52，当前市值: $117\
 	,549\,741\,209。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=NKE \n在富途查看：
@@ -38,11 +38,11 @@ TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:zq0OzIBSMFsUaUHUmhxDb
+UID:FRBSMP83fbadexXIZaF6k
 SUMMARY:摩根大通 盘前发布财报
-DTSTAMP:20240916T043937Z
+DTSTAMP:20240916T164137Z
 DTSTART;VALUE=DATE:20241011
-DESCRIPTION:财务季度：Sep/2024。\n代码：JPM，公司：摩根大通，行业: 银行。\n预计每股收益: $4.06，当前市值: $58
+DESCRIPTION:财务季度：Sep/2024。\n代码：JPM，公司：摩根大通，行业: 银行。\n预计每股收益: $4.04，当前市值: $58
 	7\,811\,032\,598。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=JPM \n在富途查
 	看：https://www.futunn.com/hk/stock/JPM-US 
 STATUS:CONFIRMED
@@ -54,25 +54,9 @@ TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:4pQtS2J3RbbCz1-KcCko3
-SUMMARY:联合健康保险 发布财报
-DTSTAMP:20240916T043937Z
-DTSTART;VALUE=DATE:20241011
-DESCRIPTION:财务季度：Sep/2024。\n代码：UNH，公司：联合健康保险，行业: 保健管理。\n预计每股收益: $7.05，当前市值:
-	 $543\,357\,707\,823。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=UNH \n
-	在富途查看：https://www.futunn.com/hk/stock/UNH-US 
-STATUS:CONFIRMED
-X-MICROSOFT-CDO-BUSYSTATUS:FREE
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Reminder
-TRIGGER:-PT2H
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:dxWy6QQj5VfzNuN0bPLf8
+UID:KdiiKLPAcdjuupwP_t3Gd
 SUMMARY:强生 盘前发布财报
-DTSTAMP:20240916T043937Z
+DTSTAMP:20240916T164137Z
 DTSTART;VALUE=DATE:20241015
 DESCRIPTION:财务季度：Sep/2024。\n代码：JNJ，公司：强生，行业: 制药。\n预计每股收益: $2.19，当前市值: $396\
 	,328\,597\,334。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=JNJ \n在富途查看：
@@ -86,9 +70,9 @@ TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:G2ev3FvF-4GlDLU_lq0_R
+UID:ZG_q9F1PkiY39nU8Run7O
 SUMMARY:高盛 发布财报
-DTSTAMP:20240916T043937Z
+DTSTAMP:20240916T164137Z
 DTSTART;VALUE=DATE:20241015
 DESCRIPTION:财务季度：Sep/2024。\n代码：GS，公司：高盛，行业: 银行、金融服务。\n预计每股收益: $8.50，当前市值: $
 	149\,707\,937\,043。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=GS \n在富途
@@ -102,9 +86,9 @@ TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:UUereHxzqQmjtSWYA4Me6
+UID:wBa28YLLnJtTbZjuUUKf8
 SUMMARY:沃尔格林博姿联合公司 盘前发布财报
-DTSTAMP:20240916T043937Z
+DTSTAMP:20240916T164137Z
 DTSTART;VALUE=DATE:20241015
 DESCRIPTION:财务季度：Aug/2024。\n代码：WBA，公司：沃尔格林博姿联合公司，行业: 零售。\n预计每股收益: $0.36，当前市
 	值: $7\,631\,351\,327。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=WBA \n
