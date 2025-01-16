@@ -2,9 +2,9 @@
   "date": "2025-01-15",
   "data": [
     {
-      "lastYearRptDt": "1/12/2024",
-      "lastYearEPS": "$3.97",
-      "time": "time-pre-market",
+      "eps": "$4.81",
+      "surprise": "19.35",
+      "time": "time-not-supplied",
       "symbol": "JPM",
       "name": "J P Morgan Chase & Co",
       "marketCap": "$696,712,294,232",
@@ -13,9 +13,9 @@
       "noOfEsts": "8"
     },
     {
-      "lastYearRptDt": "1/12/2024",
-      "lastYearEPS": "$1.29",
-      "time": "time-pre-market",
+      "eps": "$1.42",
+      "surprise": "5.97",
+      "time": "time-not-supplied",
       "symbol": "WFC",
       "name": "Wells Fargo & Company",
       "marketCap": "$237,026,440,014",
@@ -24,31 +24,31 @@
       "noOfEsts": "8"
     },
     {
-      "lastYearRptDt": "1/16/2024",
-      "lastYearEPS": "$5.48",
-      "time": "time-pre-market",
+      "eps": "$11.95",
+      "surprise": "48.08",
+      "time": "time-not-supplied",
       "symbol": "GS",
       "name": "Goldman Sachs Group, Inc. (The)",
       "marketCap": "$179,408,879,996",
       "fiscalQuarterEnding": "Dec/2024",
-      "epsForecast": "$7.99",
+      "epsForecast": "$8.07",
       "noOfEsts": "7"
     },
     {
-      "lastYearRptDt": "1/12/2024",
-      "lastYearEPS": "$9.66",
-      "time": "time-pre-market",
+      "eps": "$11.93",
+      "surprise": "5.86",
+      "time": "time-not-supplied",
       "symbol": "BLK",
       "name": "BlackRock, Inc.",
       "marketCap": "$149,174,739,008",
       "fiscalQuarterEnding": "Dec/2024",
-      "epsForecast": "$11.43",
+      "epsForecast": "$11.27",
       "noOfEsts": "7"
     },
     {
-      "lastYearRptDt": "1/12/2024",
-      "lastYearEPS": "$0.84",
-      "time": "time-pre-market",
+      "eps": "$1.34",
+      "surprise": "7.2",
+      "time": "time-not-supplied",
       "symbol": "C",
       "name": "Citigroup Inc.",
       "marketCap": "$139,007,963,020",
@@ -57,31 +57,20 @@
       "noOfEsts": "8"
     },
     {
-      "lastYearRptDt": "N/A",
-      "lastYearEPS": "N/A",
+      "eps": "N/A",
+      "surprise": "N/A",
       "time": "time-after-hours",
       "symbol": "RIO",
       "name": "Rio Tinto Plc",
       "marketCap": "$75,651,427,039",
       "fiscalQuarterEnding": "Dec/2024",
       "epsForecast": "",
-      "noOfEsts": "7"
+      "noOfEsts": "N/A"
     },
     {
-      "lastYearRptDt": "1/17/2024",
-      "lastYearEPS": "$0.28",
+      "eps": "$1.72",
+      "surprise": "10.26",
       "time": "time-not-supplied",
-      "symbol": "KMI",
-      "name": "Kinder Morgan, Inc.",
-      "marketCap": "$64,694,161,022",
-      "fiscalQuarterEnding": "Dec/2024",
-      "epsForecast": "$0.33",
-      "noOfEsts": "4"
-    },
-    {
-      "lastYearRptDt": "1/12/2024",
-      "lastYearEPS": "$1.28",
-      "time": "time-pre-market",
       "symbol": "BK",
       "name": "The Bank Of New York Mellon Corporation ",
       "marketCap": "$55,214,327,620",
@@ -90,9 +79,9 @@
       "noOfEsts": "7"
     },
     {
-      "lastYearRptDt": "1/17/2024",
-      "lastYearEPS": "$0.80",
-      "time": "time-after-hours",
+      "eps": "$1.25",
+      "surprise": "7.76",
+      "time": "time-not-supplied",
       "symbol": "SNV",
       "name": "Synovus Financial Corp.",
       "marketCap": "$7,603,174,826",
@@ -101,9 +90,9 @@
       "noOfEsts": "8"
     },
     {
-      "lastYearRptDt": "1/18/2024",
-      "lastYearEPS": "$0.48",
-      "time": "time-after-hours",
+      "eps": "$0.50",
+      "surprise": "-3.85",
+      "time": "time-not-supplied",
       "symbol": "HOMB",
       "name": "Home BancShares, Inc.",
       "marketCap": "$5,657,796,373",
@@ -112,9 +101,9 @@
       "noOfEsts": "3"
     },
     {
-      "lastYearRptDt": "1/17/2024",
-      "lastYearEPS": "$1.32",
-      "time": "time-after-hours",
+      "eps": "$0.92",
+      "surprise": "N/A",
+      "time": "time-not-supplied",
       "symbol": "FUL",
       "name": "H. B. Fuller Company",
       "marketCap": "$3,481,386,612",
@@ -123,9 +112,9 @@
       "noOfEsts": "2"
     },
     {
-      "lastYearRptDt": "1/24/2024",
-      "lastYearEPS": "$3.07",
-      "time": "time-after-hours",
+      "eps": "$2.96",
+      "surprise": "6.09",
+      "time": "time-not-supplied",
       "symbol": "CNXC",
       "name": "Concentrix Corporation",
       "marketCap": "$3,012,775,453",
@@ -134,8 +123,8 @@
       "noOfEsts": "1"
     },
     {
-      "lastYearRptDt": "1/17/2024",
-      "lastYearEPS": "$1.04",
+      "eps": "$1.25",
+      "surprise": "4.17",
       "time": "time-not-supplied",
       "symbol": "CTBI",
       "name": "Community Trust Bancorp, Inc.",
@@ -145,19 +134,30 @@
       "noOfEsts": "3"
     },
     {
-      "lastYearRptDt": "N/A",
-      "lastYearEPS": "$0.87",
+      "eps": "$1.13",
+      "surprise": "4.63",
+      "time": "time-not-supplied",
+      "symbol": "UNTY",
+      "name": "Unity Bancorp, Inc.",
+      "marketCap": "$432,693,596",
+      "fiscalQuarterEnding": "Dec/2024",
+      "epsForecast": "$1.08",
+      "noOfEsts": "2"
+    },
+    {
+      "eps": "$0.87",
+      "surprise": "N/A",
       "time": "time-not-supplied",
       "symbol": "NVEC",
       "name": "NVE Corporation",
       "marketCap": "$386,866,620",
       "fiscalQuarterEnding": "Dec/2024",
       "epsForecast": "",
-      "noOfEsts": "7"
+      "noOfEsts": "N/A"
     },
     {
-      "lastYearRptDt": "1/17/2024",
-      "lastYearEPS": "$1.27",
+      "eps": "$1.29",
+      "surprise": "12.17",
       "time": "time-not-supplied",
       "symbol": "PLBC",
       "name": "Plumas Bancorp",
@@ -167,8 +167,19 @@
       "noOfEsts": "1"
     },
     {
-      "lastYearRptDt": "1/17/2024",
-      "lastYearEPS": "($0.02)",
+      "eps": "$0.67",
+      "surprise": "N/A",
+      "time": "time-not-supplied",
+      "symbol": "UNB",
+      "name": "Union Bankshares, Inc.",
+      "marketCap": "$131,754,983",
+      "fiscalQuarterEnding": "Dec/2024",
+      "epsForecast": "",
+      "noOfEsts": "N/A"
+    },
+    {
+      "eps": "($0.09)",
+      "surprise": "N/A",
       "time": "time-not-supplied",
       "symbol": "WMPN",
       "name": "William Penn Bancorporation",
