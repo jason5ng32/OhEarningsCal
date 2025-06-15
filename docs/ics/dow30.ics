@@ -6,25 +6,9 @@ METHOD:PUBLISH
 X-WR-CALNAME:Earnings Calendar 财报日历
 X-PUBLISHED-TTL:PT1H
 BEGIN:VEVENT
-UID:nhBnnlTEOEAIlAflWpN8d
-SUMMARY:沃尔玛 发布财报
-DTSTAMP:20250614T164112Z
-DTSTART;VALUE=DATE:20250515
-DESCRIPTION:财务季度：Apr/2025。\n代码：WMT，公司：沃尔玛，行业: 零售。\n预计每股收益: $0.57，当前市值: $772
-	\,423\,443\,929。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=WMT \n在富途查看
-	：https://www.futunn.com/hk/stock/WMT-US 
-STATUS:CONFIRMED
-X-MICROSOFT-CDO-BUSYSTATUS:FREE
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Reminder
-TRIGGER:-PT2H
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:mexBbDzXIzXD-d2bQCeIR
+UID:3JiG6w4AnO9pbX_CUYe9g
 SUMMARY:家得宝 发布财报
-DTSTAMP:20250614T164112Z
+DTSTAMP:20250615T044346Z
 DTSTART;VALUE=DATE:20250520
 DESCRIPTION:财务季度：Apr/2025。\n代码：HD，公司：家得宝，行业: 零售。\n预计每股收益: $3.59，当前市值: $374\
 	,799\,828\,944。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=HD \n在富途查看：h
@@ -38,9 +22,9 @@ TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:13zGIJPp_oZcmLCtsQci2
+UID:QUcrBZekpZbFiAUUqhbqy
 SUMMARY:赛富时 发布财报
-DTSTAMP:20250614T164112Z
+DTSTAMP:20250615T044346Z
 DTSTART;VALUE=DATE:20250528
 DESCRIPTION:财务季度：Apr/2025。\n代码：CRM，公司：赛富时，行业: 云端服务。\n预计每股收益: $1.87，当前市值: $2
 	65\,264\,830\,000。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=CRM \n在富途
@@ -54,9 +38,9 @@ TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:AIDxiggETGmdMY9x3JxCp
+UID:gYri3ZoUfv0vNoiEmlFtW
 SUMMARY:耐克 盘后发布财报
-DTSTAMP:20250614T164112Z
+DTSTAMP:20250615T044346Z
 DTSTART;VALUE=DATE:20250626
 DESCRIPTION:财务季度：May/2025。\n代码：NKE，公司：耐克，行业: 服装。\n预计每股收益: $0.11，当前市值: $92\,
 	692\,202\,584。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=NKE \n在富途查看：h
@@ -70,13 +54,29 @@ TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:f01Ah7Z_bjhQf1igNFs-C
+UID:lxngeJ9GXKEVrHrmfcl4K
 SUMMARY:沃尔格林博姿联合公司 盘前发布财报
-DTSTAMP:20250614T164112Z
+DTSTAMP:20250615T044346Z
 DTSTART;VALUE=DATE:20250626
 DESCRIPTION:财务季度：May/2025。\n代码：WBA，公司：沃尔格林博姿联合公司，行业: 零售。\n预计每股收益: $0.34，当前市
 	值: $9\,823\,422\,521。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=WBA \n
 	在富途查看：https://www.futunn.com/hk/stock/WBA-US 
+STATUS:CONFIRMED
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:49oZnjHuik1MfvSz1em_i
+SUMMARY:摩根大通 盘前发布财报
+DTSTAMP:20250615T044346Z
+DTSTART;VALUE=DATE:20250714
+DESCRIPTION:财务季度：Jun/2025。\n代码：JPM，公司：摩根大通，行业: 银行。\n预计每股收益: $4.45，当前市值: $74
+	5\,464\,305\,461。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=JPM \n在富途查
+	看：https://www.futunn.com/hk/stock/JPM-US 
 STATUS:CONFIRMED
 X-MICROSOFT-CDO-BUSYSTATUS:FREE
 BEGIN:VALARM
