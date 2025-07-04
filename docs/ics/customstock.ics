@@ -6,25 +6,9 @@ METHOD:PUBLISH
 X-WR-CALNAME:Earnings Calendar 财报日历
 X-PUBLISHED-TTL:PT1H
 BEGIN:VEVENT
-UID:NH6g15Mn9oqTO_oHEvxO0
-SUMMARY:蔚来 发布财报
-DTSTAMP:20250703T164339Z
-DTSTART;VALUE=DATE:20250603
-DESCRIPTION:财务季度：Mar/2025。\n代码：NIO，公司：蔚来，行业: 汽车。\n预计每股收益: ($0.22)，当前市值: $7\
-	,928\,346\,811。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=NIO \n在富途查看：
-	https://www.futunn.com/hk/stock/NIO-US 
-STATUS:CONFIRMED
-X-MICROSOFT-CDO-BUSYSTATUS:FREE
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Reminder
-TRIGGER:-PT2H
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:dNkr9P0db2_bpI9gr_bah
+UID:fMwsisA6NVhdnJp6MmRjd
 SUMMARY:台积电 发布财报
-DTSTAMP:20250703T164339Z
+DTSTAMP:20250704T044515Z
 DTSTART;VALUE=DATE:20250717
 DESCRIPTION:财务季度：Jun/2025。\n代码：TSM，公司：台积电，行业: 半导体。\n预计每股收益: $2.32，当前市值: $1\
 	,211\,577\,296\,973。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=TSM \n在
@@ -38,9 +22,9 @@ TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:GD1JBiuI6IrA4ugffHeWm
+UID:F0awkz0gbv8Lz7tUTLhO0
 SUMMARY:Arm 发布财报
-DTSTAMP:20250703T164339Z
+DTSTAMP:20250704T044515Z
 DTSTART;VALUE=DATE:20250730
 DESCRIPTION:财务季度：Jun/2025。\n代码：ARM，公司：Arm，行业: 半导体。\n预计每股收益: $0.16，当前市值: $16
 	3\,793\,992\,165。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=ARM \n在富途查
