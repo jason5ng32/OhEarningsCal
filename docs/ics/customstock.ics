@@ -6,9 +6,9 @@ METHOD:PUBLISH
 X-WR-CALNAME:Earnings Calendar 财报日历
 X-PUBLISHED-TTL:PT1H
 BEGIN:VEVENT
-UID:X6Kq9I-NZJn5Ly0PDd7Pw
+UID:JZQox0hfFUV2xDTkUciGG
 SUMMARY:台积电 发布财报
-DTSTAMP:20250720T164249Z
+DTSTAMP:20250721T045030Z
 DTSTART;VALUE=DATE:20250717
 DESCRIPTION:财务季度：Jun/2025。\n代码：TSM，公司：台积电，行业: 半导体。\n预计每股收益: $2.37，当前市值: $1\
 	,273\,815\,856\,749。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=TSM \n在
@@ -22,9 +22,9 @@ TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:T9L8C2hIQFCqmb8U5kZmq
+UID:-EVHe_cnEcffw3KBImNF4
 SUMMARY:Arm 盘后发布财报
-DTSTAMP:20250720T164249Z
+DTSTAMP:20250721T045030Z
 DTSTART;VALUE=DATE:20250730
 DESCRIPTION:财务季度：Jun/2025。\n代码：ARM，公司：Arm，行业: 半导体。\n预计每股收益: $0.16，当前市值: $16
 	6\,495\,115\,363。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=ARM \n在富途查
@@ -38,9 +38,9 @@ TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:ABavQ7KxKyveqxZNqbP9F
+UID:SzvSWClokz2dCoR7z3rSh
 SUMMARY:Coinbase 盘后发布财报
-DTSTAMP:20250720T164249Z
+DTSTAMP:20250721T045030Z
 DTSTART;VALUE=DATE:20250731
 DESCRIPTION:财务季度：Jun/2025。\n代码：COIN，公司：Coinbase，行业: 金融科技。\n预计每股收益: $0.82，当前
 	市值: $104\,620\,063\,963。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=COI
@@ -54,9 +54,9 @@ TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:RiT51AA_o9QjsPdgWd1MA
+UID:LCgyjGHdRxC2Sr4yVXKyR
 SUMMARY:Cloudflare 盘后发布财报
-DTSTAMP:20250720T164249Z
+DTSTAMP:20250721T045030Z
 DTSTART;VALUE=DATE:20250731
 DESCRIPTION:财务季度：Jun/2025。\n代码：NET，公司：Cloudflare，行业: 云计算。\n预计每股收益: ($0.05)，
 	当前市值: $66\,289\,235\,366。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=NE
@@ -70,9 +70,9 @@ TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:Y6zNjMViRMm7xlY0tKsqy
+UID:BwarTOSgVxi2lo3iL3yQW
 SUMMARY:Super Micro Computer 发布财报
-DTSTAMP:20250720T164249Z
+DTSTAMP:20250721T045030Z
 DTSTART;VALUE=DATE:20250805
 DESCRIPTION:财务季度：Jun/2025。\n代码：SMCI，公司：Super Micro Computer，行业: 计算机硬件。\n预计每
 	股收益: $0.35，当前市值: $31\,482\,130\,827。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks:/
@@ -86,9 +86,9 @@ TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:2dMJCAQ0KiMzxLtbOwbl0
+UID:npeZHoUlmI4N0q_GTyK-L
 SUMMARY:Novo Nordisk 发布财报
-DTSTAMP:20250720T164249Z
+DTSTAMP:20250721T045030Z
 DTSTART;VALUE=DATE:20250806
 DESCRIPTION:财务季度：Jun/2025。\n代码：NVO，公司：Novo Nordisk，行业: 制药。\n预计每股收益: $0.94，当
 	前市值: $291\,519\,850\,000。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=NV
@@ -102,9 +102,9 @@ TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:wnp4ELInxdq5-YEGhAhqb
+UID:E0kXQvxhf-IVNXr10_d5l
 SUMMARY:Shopify 盘前发布财报
-DTSTAMP:20250720T164249Z
+DTSTAMP:20250721T045030Z
 DTSTART;VALUE=DATE:20250806
 DESCRIPTION:财务季度：Jun/2025。\n代码：SHOP，公司：Shopify，行业: 电子商务。\n预计每股收益: $0.20，当前市
 	值: $164\,443\,025\,399。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=SHOP
@@ -118,9 +118,9 @@ TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:7SaR8fBlJvQLg4zOR0dQW
+UID:OHnlsm4J4QVzWe3SPFBMj
 SUMMARY:索尼 发布财报
-DTSTAMP:20250720T164249Z
+DTSTAMP:20250721T045030Z
 DTSTART;VALUE=DATE:20250806
 DESCRIPTION:财务季度：Jun/2025。\n代码：SONY，公司：索尼，行业: 消费电子。\n预计每股收益: $0.23，当前市值: $1
 	47\,070\,306\,021。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=SONY \n在富
@@ -134,13 +134,29 @@ TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:e2TqdWxxVLDf_tqlM5aLn
+UID:aSE7Tt9xqJ_nrUfUEunbS
 SUMMARY:Unity 盘前发布财报
-DTSTAMP:20250720T164249Z
+DTSTAMP:20250721T045030Z
 DTSTART;VALUE=DATE:20250806
 DESCRIPTION:财务季度：Jun/2025。\n代码：U，公司：Unity，行业: 软件。\n预计每股收益: ($0.25)，当前市值: $1
 	5\,181\,167\,815。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=U \n在富途查看：
 	https://www.futunn.com/hk/stock/U-US 
+STATUS:CONFIRMED
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:FuMn_Q1hxNRCzObg-tEHk
+SUMMARY:小鹏汽车 发布财报
+DTSTAMP:20250721T045030Z
+DTSTART;VALUE=DATE:20250819
+DESCRIPTION:财务季度：Jun/2025。\n代码：XPEV，公司：小鹏汽车，行业: 汽车。\n预计每股收益: ，当前市值: $17\,31
+	3\,086\,072。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=XPEV \n在富途查看：ht
+	tps://www.futunn.com/hk/stock/XPEV-US 
 STATUS:CONFIRMED
 X-MICROSOFT-CDO-BUSYSTATUS:FREE
 BEGIN:VALARM
