@@ -6,25 +6,9 @@ METHOD:PUBLISH
 X-WR-CALNAME:Earnings Calendar 财报日历
 X-PUBLISHED-TTL:PT1H
 BEGIN:VEVENT
-UID:j3HwBBnNFuPBs05u86ZKK
-SUMMARY:家得宝 发布财报
-DTSTAMP:20250918T164054Z
-DTSTART;VALUE=DATE:20250819
-DESCRIPTION:财务季度：Jul/2025。\n代码：HD，公司：家得宝，行业: 零售。\n预计每股收益: $4.71，当前市值: $405\
-	,134\,675\,492。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=HD \n在富途查看：h
-	ttps://www.futunn.com/hk/stock/HD-US 
-STATUS:CONFIRMED
-X-MICROSOFT-CDO-BUSYSTATUS:FREE
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Reminder
-TRIGGER:-PT2H
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:xbJOF7KugGUgFGuwG4F4Y
+UID:ZEjsZ0CGppedJ9x2XtZfo
 SUMMARY:沃尔玛 发布财报
-DTSTAMP:20250918T164054Z
+DTSTAMP:20250919T043924Z
 DTSTART;VALUE=DATE:20250821
 DESCRIPTION:财务季度：Jul/2025。\n代码：WMT，公司：沃尔玛，行业: 零售。\n预计每股收益: $0.73，当前市值: $781
 	\,761\,763\,345。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=WMT \n在富途查看
@@ -38,9 +22,9 @@ TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:5Ei5zJNFxwekWVVuNIqtF
+UID:-UmCF-nwNoqCSJd2sW81Q
 SUMMARY:赛富时 发布财报
-DTSTAMP:20250918T164054Z
+DTSTAMP:20250919T043924Z
 DTSTART;VALUE=DATE:20250903
 DESCRIPTION:财务季度：Jul/2025。\n代码：CRM，公司：赛富时，行业: 云端服务。\n预计每股收益: $2.12，当前市值: $2
 	45\,166\,200\,000。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=CRM \n在富途
@@ -54,9 +38,9 @@ TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:PIMubeaaLcu1IwQ9cd6cm
+UID:0ukytn6JquyIala8YUau3
 SUMMARY:耐克 盘后发布财报
-DTSTAMP:20250918T164054Z
+DTSTAMP:20250919T043924Z
 DTSTART;VALUE=DATE:20250930
 DESCRIPTION:财务季度：Aug/2025。\n代码：NKE，公司：耐克，行业: 服装。\n预计每股收益: $0.28，当前市值: $106\
 	,794\,891\,507。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=NKE \n在富途查看：
@@ -70,9 +54,9 @@ TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:XnQYFRJY1gjxoLvmJ2An7
+UID:oHl9VHQbpJne_B88YJiQ1
 SUMMARY:摩根大通 盘前发布财报
-DTSTAMP:20250918T164054Z
+DTSTAMP:20250919T043924Z
 DTSTART;VALUE=DATE:20251014
 DESCRIPTION:财务季度：Sep/2025。\n代码：JPM，公司：摩根大通，行业: 银行。\n预计每股收益: $4.73，当前市值: $85
 	7\,235\,763\,985。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=JPM \n在富途查
@@ -86,9 +70,9 @@ TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:KXSBLY63ZL4-NhI_MeaDG
+UID:IvKrfwKnQTTgkcbfv7Pv4
 SUMMARY:强生 盘前发布财报
-DTSTAMP:20250918T164054Z
+DTSTAMP:20250919T043924Z
 DTSTART;VALUE=DATE:20251014
 DESCRIPTION:财务季度：Sep/2025。\n代码：JNJ，公司：强生，行业: 制药。\n预计每股收益: $2.78，当前市值: $426\
 	,757\,648\,118。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=JNJ \n在富途查看：
@@ -102,9 +86,9 @@ TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:_oSkfdOoYkj7PGCuNqKnr
+UID:EZru5Z6i-50BF0nsrEV4y
 SUMMARY:高盛 盘前发布财报
-DTSTAMP:20250918T164054Z
+DTSTAMP:20250919T043924Z
 DTSTART;VALUE=DATE:20251014
 DESCRIPTION:财务季度：Sep/2025。\n代码：GS，公司：高盛，行业: 银行、金融服务。\n预计每股收益: $10.27，当前市值: 
 	$240\,427\,145\,688。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=GS \n在富
@@ -118,9 +102,9 @@ TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:k-RLDIXUBb4PKPqBdQCem
+UID:2qJYG3hSgWL5opHcrdl5m
 SUMMARY:旅行者保险 盘前发布财报
-DTSTAMP:20250918T164054Z
+DTSTAMP:20250919T043924Z
 DTSTART;VALUE=DATE:20251016
 DESCRIPTION:财务季度：Sep/2025。\n代码：TRV，公司：旅行者保险，行业: 保险。\n预计每股收益: $5.28，当前市值: $6
 	1\,918\,560\,290。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=TRV \n在富途查
@@ -134,9 +118,9 @@ TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:9jhc6p_hc-8VgYKPUGza0
+UID:__PlRKwEK4d_y17QDSAxv
 SUMMARY:美国运通 发布财报
-DTSTAMP:20250918T164054Z
+DTSTAMP:20250919T043924Z
 DTSTART;VALUE=DATE:20251017
 DESCRIPTION:财务季度：Sep/2025。\n代码：AXP，公司：美国运通，行业: 金融服务。\n预计每股收益: $3.95，当前市值: $
 	233\,816\,428\,272。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=AXP \n在富
