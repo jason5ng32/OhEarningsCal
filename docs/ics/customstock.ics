@@ -6,9 +6,9 @@ METHOD:PUBLISH
 X-WR-CALNAME:Earnings Calendar 财报日历
 X-PUBLISHED-TTL:PT1H
 BEGIN:VEVENT
-UID:KSdF9YpZ0DKt9dlzPkCK_
+UID:6FI1tzHlnsu3T5aJqmLQi
 SUMMARY:蔚来 发布财报
-DTSTAMP:20250930T164142Z
+DTSTAMP:20251001T043946Z
 DTSTART;VALUE=DATE:20250902
 DESCRIPTION:财务季度：Jun/2025。\n代码：NIO，公司：蔚来，行业: 汽车。\n预计每股收益: ($0.30)，当前市值: $14
 	\,778\,618\,135。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=NIO \n在富途查看
@@ -22,9 +22,9 @@ TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:qHj_Gj_olx8RbsBOnnVzX
+UID:GhaX2CvneGVQJr7wRzqmW
 SUMMARY:C3.ai 发布财报
-DTSTAMP:20250930T164142Z
+DTSTAMP:20251001T043946Z
 DTSTART;VALUE=DATE:20250903
 DESCRIPTION:财务季度：Jul/2025。\n代码：AI，公司：C3.ai，行业: 软件。\n预计每股收益: ($0.81)，当前市值: $
 	2\,241\,557\,246。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=AI \n在富途查看
@@ -38,9 +38,9 @@ TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:d9UfmOUdI8ndrQW35izo0
+UID:FE5zWoGH0eZbqeMLMTX5i
 SUMMARY:台积电 盘前发布财报
-DTSTAMP:20250930T164142Z
+DTSTAMP:20251001T043946Z
 DTSTART;VALUE=DATE:20251016
 DESCRIPTION:财务季度：Sep/2025。\n代码：TSM，公司：台积电，行业: 半导体。\n预计每股收益: $2.56，当前市值: $1\
 	,417\,120\,140\,633。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=TSM \n在
@@ -54,13 +54,29 @@ TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:hxqyeC0nVcpaJQoekzpXc
+UID:GGYMdqSCUot2oV-GMrwP9
 SUMMARY:Coinbase 发布财报
-DTSTAMP:20250930T164142Z
+DTSTAMP:20251001T043946Z
 DTSTART;VALUE=DATE:20251029
 DESCRIPTION:财务季度：Sep/2025。\n代码：COIN，公司：Coinbase，行业: 金融科技。\n预计每股收益: $1.04，当前
 	市值: $85\,814\,775\,056。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=COIN
 	 \n在富途查看：https://www.futunn.com/hk/stock/COIN-US 
+STATUS:CONFIRMED
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:7kIxfgwhrLH17hoW7mJ9I
+SUMMARY:理想汽车 发布财报
+DTSTAMP:20251001T043946Z
+DTSTART;VALUE=DATE:20251030
+DESCRIPTION:财务季度：Sep/2025。\n代码：LI，公司：理想汽车，行业: 汽车。\n预计每股收益: ，当前市值: $26\,699\
+	,929\,975。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=LI \n在富途查看：https:
+	//www.futunn.com/hk/stock/LI-US 
 STATUS:CONFIRMED
 X-MICROSOFT-CDO-BUSYSTATUS:FREE
 BEGIN:VALARM
