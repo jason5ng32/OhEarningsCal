@@ -2,8 +2,8 @@
   "date": "2025-10-10",
   "data": [
     {
-      "lastYearRptDt": "N/A",
-      "lastYearEPS": "$1.44",
+      "eps": "$1.44",
+      "surprise": "N/A",
       "time": "time-not-supplied",
       "symbol": "HIFS",
       "name": "Hingham Institution for Savings",
@@ -13,8 +13,8 @@
       "noOfEsts": "1"
     },
     {
-      "lastYearRptDt": "10/11/2024",
-      "lastYearEPS": "$1.07",
+      "eps": "$1.07",
+      "surprise": "N/A",
       "time": "time-not-supplied",
       "symbol": "UNTY",
       "name": "Unity Bancorp, Inc.",
@@ -24,8 +24,8 @@
       "noOfEsts": "2"
     },
     {
-      "lastYearRptDt": "10/11/2024",
-      "lastYearEPS": "($0.04)",
+      "eps": "($0.04)",
+      "surprise": "N/A",
       "time": "time-not-supplied",
       "symbol": "GLDG",
       "name": "GoldMining Inc.",
@@ -35,8 +35,8 @@
       "noOfEsts": "1"
     },
     {
-      "lastYearRptDt": "10/04/2024",
-      "lastYearEPS": "($0.53)",
+      "eps": "($0.53)",
+      "surprise": "N/A",
       "time": "time-not-supplied",
       "symbol": "LFCR",
       "name": "Lifecore Biomedical, Inc.",
@@ -44,6 +44,17 @@
       "fiscalQuarterEnding": "Aug/2025",
       "epsForecast": "($0.30)",
       "noOfEsts": "2"
+    },
+    {
+      "eps": "($0.11)",
+      "surprise": "-57.14",
+      "time": "time-not-supplied",
+      "symbol": "HOVR",
+      "name": "New Horizon Aircraft Ltd.",
+      "marketCap": "$134,100,426",
+      "fiscalQuarterEnding": "Aug/2025",
+      "epsForecast": "($0.07)",
+      "noOfEsts": "1"
     }
   ]
 }
