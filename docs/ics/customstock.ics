@@ -6,9 +6,9 @@ METHOD:PUBLISH
 X-WR-CALNAME:Earnings Calendar 财报日历
 X-PUBLISHED-TTL:PT1H
 BEGIN:VEVENT
-UID:0gp8SgqpRIe1Dsz1XWdTV
+UID:Quz_GSAhGftkDfVNi8oHM
 SUMMARY:台积电 发布财报
-DTSTAMP:20260111T164245Z
+DTSTAMP:20260112T045205Z
 DTSTART;VALUE=DATE:20260115
 DESCRIPTION:财务季度：Dec/2025。\n代码：TSM，公司：台积电，行业: 半导体。\n预计每股收益: $2.71，当前市值: $1\
 	,649\,373\,699\,530。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=TSM \n在
@@ -22,9 +22,9 @@ TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:Dp7bzCnaYm6wZNzpHJUmd
+UID:kHrGi54Upm0zcZf8YA7KE
 SUMMARY:Novo Nordisk 发布财报
-DTSTAMP:20260111T164245Z
+DTSTAMP:20260112T045205Z
 DTSTART;VALUE=DATE:20260204
 DESCRIPTION:财务季度：Dec/2025。\n代码：NVO，公司：Novo Nordisk，行业: 制药。\n预计每股收益: $0.90，当
 	前市值: $256\,023\,100\,000。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=NV
@@ -38,9 +38,9 @@ TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:7N-vInYQqUH3PklGLiglA
+UID:QGxWyAz3JDk1ETlscLozC
 SUMMARY:Arm 盘后发布财报
-DTSTAMP:20260111T164245Z
+DTSTAMP:20260112T045205Z
 DTSTART;VALUE=DATE:20260204
 DESCRIPTION:财务季度：Dec/2025。\n代码：ARM，公司：Arm，行业: 半导体。\n预计每股收益: $0.21，当前市值: $11
 	9\,781\,573\,007。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=ARM \n在富途查
@@ -54,13 +54,29 @@ TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:QrF8xlChVvZbyh9knAQ01
+UID:wyeW9Vuvi32CZ6bRn5pAj
 SUMMARY:Cloudflare 发布财报
-DTSTAMP:20260111T164245Z
+DTSTAMP:20260112T045205Z
 DTSTART;VALUE=DATE:20260205
 DESCRIPTION:财务季度：Dec/2025。\n代码：NET，公司：Cloudflare，行业: 云计算。\n预计每股收益: $0.01，当前
 	市值: $65\,488\,566\,608。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=NET 
 	\n在富途查看：https://www.futunn.com/hk/stock/NET-US 
+STATUS:CONFIRMED
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:KjWAv5pCTLE3Rx4_KyZo1
+SUMMARY:Shopify 发布财报
+DTSTAMP:20260112T045205Z
+DTSTART;VALUE=DATE:20260210
+DESCRIPTION:财务季度：Dec/2025。\n代码：SHOP，公司：Shopify，行业: 电子商务。\n预计每股收益: $0.40，当前市
+	值: $219\,195\,538\,657。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=SHOP
+	 \n在富途查看：https://www.futunn.com/hk/stock/SHOP-US 
 STATUS:CONFIRMED
 X-MICROSOFT-CDO-BUSYSTATUS:FREE
 BEGIN:VALARM
