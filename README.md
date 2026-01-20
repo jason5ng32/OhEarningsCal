@@ -12,7 +12,7 @@
 
 ## 直接使用
 
-打开 [https://stock.retire.money/](https://stock.retire.money/)，找到已经生成的 ics 文件，复制链接，然后在你的日历软件中，添加一个新的日历，输入这个链接，就可以了。
+打开 [https://earnings.beavern.com/](https://earnings.beavern.com/)，找到已经生成的 ics 文件，复制链接，然后在你的日历软件中，添加一个新的日历，输入这个链接，就可以了。
 
 备注：仅仅包含美国市场的财报日历。日历内容只包含当天前后 30 天的，再多其实没有意义。
 
