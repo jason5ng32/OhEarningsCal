@@ -6,9 +6,9 @@ METHOD:PUBLISH
 X-WR-CALNAME:Earnings Calendar 财报日历
 X-PUBLISHED-TTL:PT1H
 BEGIN:VEVENT
-UID:1OK5YqV0Ew27DLZTVzm4g
+UID:iT-aeeBjuT8nK5MoCEG3d
 SUMMARY:沃尔玛 盘前发布财报
-DTSTAMP:20260314T164829Z
+DTSTAMP:20260315T051534Z
 DTSTART;VALUE=DATE:20260219
 DESCRIPTION:财务季度：Jan/2026。\n代码：WMT，公司：沃尔玛，行业: 零售。\n预计每股收益: $0.73，当前市值: $1\,
 	009\,182\,540\,982。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=WMT \n在富
@@ -22,9 +22,9 @@ TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:wc_EVaOQQCAMjh_HvUxba
+UID:-K28r7qC6DXzpEgebQkAe
 SUMMARY:家得宝 盘前发布财报
-DTSTAMP:20260314T164829Z
+DTSTAMP:20260315T051534Z
 DTSTART;VALUE=DATE:20260224
 DESCRIPTION:财务季度：Jan/2026。\n代码：HD，公司：家得宝，行业: 零售。\n预计每股收益: $2.52，当前市值: $380\
 	,534\,265\,141。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=HD \n在富途查看：h
@@ -38,9 +38,9 @@ TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:8m3swqYwt6enM4VqiQO7A
+UID:Z_O1shpf7DUUZ-dOnOaoY
 SUMMARY:赛富时 发布财报
-DTSTAMP:20260314T164829Z
+DTSTAMP:20260315T051534Z
 DTSTART;VALUE=DATE:20260225
 DESCRIPTION:财务季度：Jan/2026。\n代码：CRM，公司：赛富时，行业: 云端服务。\n预计每股收益: $2.14，当前市值: $1
 	79\,669\,750\,000。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=CRM \n在富途
@@ -54,13 +54,29 @@ TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:cObz6cV_HBWhdC4HJyGnc
+UID:C3Zbk5faHlSoGDs7eGrBi
 SUMMARY:耐克 盘后发布财报
-DTSTAMP:20260314T164829Z
+DTSTAMP:20260315T051534Z
 DTSTART;VALUE=DATE:20260331
 DESCRIPTION:财务季度：Feb/2026。\n代码：NKE，公司：耐克，行业: 服装。\n预计每股收益: $0.32，当前市值: $80\,
 	133\,153\,550。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=NKE \n在富途查看：h
 	ttps://www.futunn.com/hk/stock/NKE-US 
+STATUS:CONFIRMED
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:X1CeR8ywnnXL20Vf_Lmlt
+SUMMARY:高盛 盘前发布财报
+DTSTAMP:20260315T051534Z
+DTSTART;VALUE=DATE:20260413
+DESCRIPTION:财务季度：Mar/2026。\n代码：GS，公司：高盛，行业: 银行、金融服务。\n预计每股收益: $16.14，当前市值: 
+	$233\,698\,861\,133。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=GS \n在富
+	途查看：https://www.futunn.com/hk/stock/GS-US 
 STATUS:CONFIRMED
 X-MICROSOFT-CDO-BUSYSTATUS:FREE
 BEGIN:VALARM
