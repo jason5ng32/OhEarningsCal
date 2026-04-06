@@ -6,9 +6,9 @@ METHOD:PUBLISH
 X-WR-CALNAME:Earnings Calendar 财报日历
 X-PUBLISHED-TTL:PT1H
 BEGIN:VEVENT
-UID:W0oell37DxHw8ar-DIa3n
+UID:TpbI8bXQDdWyL26YWe8uE
 SUMMARY:理想汽车 发布财报
-DTSTAMP:20260405T165106Z
+DTSTAMP:20260406T052340Z
 DTSTART;VALUE=DATE:20260312
 DESCRIPTION:财务季度：Dec/2025。\n代码：LI，公司：理想汽车，行业: 汽车。\n预计每股收益: $0.05，当前市值: $18\
 	,868\,797\,125。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=LI \n在富途查看：h
@@ -22,9 +22,9 @@ TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:ZFa_ic-nwTE5iZVlvN6Rl
+UID:vJ0h5NBusZ63oEyI1AwI4
 SUMMARY:BOSS 直聘 发布财报
-DTSTAMP:20260405T165106Z
+DTSTAMP:20260406T052340Z
 DTSTART;VALUE=DATE:20260318
 DESCRIPTION:财务季度：Dec/2025。\n代码：BZ，公司：BOSS 直聘，行业: 人力资源。\n预计每股收益: $0.25，当前市值:
 	 $5\,951\,531\,774。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=BZ \n在富途
@@ -38,9 +38,9 @@ TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:A8Qx4hChmTdYJoKoQvu2C
+UID:jx0WKK7zPyCxk7adEAcD5
 SUMMARY:阿里巴巴 发布财报
-DTSTAMP:20260405T165106Z
+DTSTAMP:20260406T052340Z
 DTSTART;VALUE=DATE:20260319
 DESCRIPTION:财务季度：Dec/2025。\n代码：BABA，公司：阿里巴巴，行业: 电子商务。\n预计每股收益: $1.75，当前市值: 
 	$288\,429\,005\,054。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=BABA \n
@@ -54,9 +54,9 @@ TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:1iNIpbiI0CUUYdvAQCU-F
+UID:IJ1_wlIzt1eduLB-CBppt
 SUMMARY:小鹏汽车 发布财报
-DTSTAMP:20260405T165106Z
+DTSTAMP:20260406T052340Z
 DTSTART;VALUE=DATE:20260320
 DESCRIPTION:财务季度：Dec/2025。\n代码：XPEV，公司：小鹏汽车，行业: 汽车。\n预计每股收益: ，当前市值: $18\,19
 	6\,794\,636。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=XPEV \n在富途查看：ht
@@ -70,9 +70,9 @@ TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:CNkSJATwMJaMW9-qO7Kj4
+UID:tWHvDq1ZHSSWNFErQL_KK
 SUMMARY:拼多多 发布财报
-DTSTAMP:20260405T165106Z
+DTSTAMP:20260406T052340Z
 DTSTART;VALUE=DATE:20260325
 DESCRIPTION:财务季度：Dec/2025。\n代码：PDD，公司：拼多多，行业: 电子商务。\n预计每股收益: $3.21，当前市值: $1
 	45\,669\,923\,466。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=PDD \n在富途
@@ -86,13 +86,29 @@ TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:RLibLL6lub_o9Kg4GqExm
+UID:0oSuq4alin-vdQ7MO2eyX
 SUMMARY:台积电 盘前发布财报
-DTSTAMP:20260405T165106Z
+DTSTAMP:20260406T052340Z
 DTSTART;VALUE=DATE:20260416
 DESCRIPTION:财务季度：Mar/2026。\n代码：TSM，公司：台积电，行业: 半导体。\n预计每股收益: $3.27，当前市值: $1\
 	,771\,153\,814\,826。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks://?symbol=TSM \n在
 	富途查看：https://www.futunn.com/hk/stock/TSM-US 
+STATUS:CONFIRMED
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:6HnkoYHa5aakh-0dXkGlY
+SUMMARY:Super Micro Computer 发布财报
+DTSTAMP:20260406T052340Z
+DTSTART;VALUE=DATE:20260505
+DESCRIPTION:财务季度：Mar/2026。\n代码：SMCI，公司：Super Micro Computer，行业: 计算机硬件。\n预计每
+	股收益: $0.54，当前市值: $13\,483\,252\,024。\n ~~~~~~~~~~~~ \n在股票 app 打开： stocks:/
+	/?symbol=SMCI \n在富途查看：https://www.futunn.com/hk/stock/SMCI-US 
 STATUS:CONFIRMED
 X-MICROSOFT-CDO-BUSYSTATUS:FREE
 BEGIN:VALARM
