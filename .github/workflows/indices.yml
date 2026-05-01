@@ -4,6 +4,16 @@ on:
   schedule:
     - cron: '17 6 * * 1' # every Monday 06:17 UTC
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'src/fetch/indices.js'
+      - 'src/cli/fetch-indices.js'
+      - 'src/config/indices.js'
+      - 'src/lib/**'
+      - 'package.json'
+      - 'package-lock.json'
+      - '.github/workflows/indices.yml'
 
 permissions:
   contents: write
