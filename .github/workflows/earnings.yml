@@ -1,0 +1,61 @@
+name: Update earnings calendar
+
+on:
+  schedule:
+    - cron: '34 4,16 * * *' # 04:34 and 16:34 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - run: npm ci
+
+      - name: Restore earnings cache
+        uses: actions/cache@v4
+        with:
+          path: data/earnings
+          key: earnings-${{ github.run_id }}
+          restore-keys: |
+            earnings-
+
+      - name: Fetch earnings window
+        run: npm run fetch
+        env:
+          SHOULD_GEN_SELECTED: ${{ vars.SHOULD_GEN_SELECTED }}
+          SHOULD_GEN_ALL: ${{ vars.SHOULD_GEN_ALL }}
+
+      - name: Generate ics files
+        run: npm run gen
+        env:
+          SHOULD_GEN_SELECTED: ${{ vars.SHOULD_GEN_SELECTED }}
+          SHOULD_GEN_ALL: ${{ vars.SHOULD_GEN_ALL }}
+          CUSTOM_STOCKS: ${{ vars.CUSTOM_STOCKS }}
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+      - id: deploy
+        uses: actions/deploy-pages@v4

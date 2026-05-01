@@ -1,0 +1,37 @@
+name: Update index constituents
+
+on:
+  schedule:
+    - cron: '17 6 * * 1' # every Monday 06:17 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - run: npm ci
+
+      - name: Refresh indices
+        run: npm run fetch:indices
+
+      - name: Commit if changed
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          if git diff --quiet -- data/indices; then
+            echo "No index changes."
+          else
+            git add data/indices
+            git commit -m "chore(indices): weekly refresh"
+            git push
+          fi

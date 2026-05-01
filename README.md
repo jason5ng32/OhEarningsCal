@@ -2,50 +2,78 @@
 
 <a href="https://trendshift.io/repositories/8148" target="_blank"><img src="https://trendshift.io/api/badge/repositories/8148" alt="jason5ng32%2FOhEarningsCal | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
 
-这个项目本来是我自用的一个小工具，功能是，将我关注的美股公司的财报日程，自动导入到我的日历（比如 Google Calendar）中。
+Subscribe to US stock earnings dates from your calendar app. This started as a tool I built for myself — I'd rather glance at my calendar than open a brokerage app — and turned out useful enough to open-source.
 
-啊，我就是不喜欢打开炒股 app 看，我就是喜欢在日历中看。
+## Just use it
 
-或许这个工具对你也有用，所以我把它开源了。
+Visit [https://earnings.beavern.com/](https://earnings.beavern.com/), pick a calendar, copy the link, then add it as a calendar subscription in your app of choice.
 
-代码很粗糙的，但是能用（毕竟我是个产品经理啊）。
+The calendars cover the US market only, in a rolling window of ±30 days around today (anything further out isn't accurate enough to matter).
 
-## 直接使用
+## Calendars
 
-打开 [https://earnings.beavern.com/](https://earnings.beavern.com/)，找到已经生成的 ics 文件，复制链接，然后在你的日历软件中，添加一个新的日历，输入这个链接，就可以了。
+| File | Contents |
+| --- | --- |
+| `all.ics` | Every company that reports earnings in the window |
+| `nasdaq100.ics` | Nasdaq-100 constituents |
+| `sp500.ics` | S&P 500 constituents |
+| `dow30.ics` | Dow Jones Industrial Average constituents |
+| `customstock.ics` | A custom watchlist driven by the `CUSTOM_STOCKS` env var |
+| `selected.ics` | Union of the four above, deduplicated |
 
-备注：仅仅包含美国市场的财报日历。日历内容只包含当天前后 30 天的，再多其实没有意义。
+## Self-hosting
 
-## 关于更新
+1. Fork this repo
+2. **Settings → Pages → Source** → switch to **GitHub Actions**
+3. **Settings → Secrets and variables → Actions → Variables** → add:
+   - `SHOULD_GEN_SELECTED` = `true` / `false`
+   - `SHOULD_GEN_ALL` = `true` / `false`
+   - `CUSTOM_STOCKS` = comma-separated tickers, e.g. `PDD,BABA,TCEHY` (leave empty to skip `customstock.ics`)
+4. Wait for the next scheduled run, or kick off **Actions → Update earnings calendar → Run workflow** manually.
 
-项目已经设置了使用 Github Actions 自动更新：
+## Automation
 
-1. 每天 2 次从纳斯达克定时抓取未来 30 天的财报日历
-2. 每天 2 次生成对应的 ics 订阅文件
+| Workflow | Schedule | What it does |
+| --- | --- | --- |
+| `earnings.yml` | Daily 04:34 / 16:34 UTC | Fetch earnings → build ics → deploy to GitHub Pages |
+| `indices.yml` | Mondays 06:17 UTC | Refresh index constituents from Wikipedia, commit `data/indices/` |
 
-通常，更新会自动执行。不过，实测发现，有时候 Github Actions 会出现延迟，有时候甚至可能因为高负荷而错过执行。
+Earnings data is cached in GitHub Actions cache, never in git — `main` only carries source code and the index constituents.
 
-如果你发现了这种情况，可以通过 Github API 触发手动执行。
+## Local development
 
-## 关于 ics 清单
+```sh
+npm install
+cp .env.example .env   # edit env vars
 
-默认情况下，程序会生成 6 个 ics 文件，分别是：
+npm run fetch:indices  # first run / when refreshing constituents
+npm run fetch          # pull yesterday + next 30 days into data/earnings/
+npm run gen            # write docs/ics/*.ics
+npm run dev            # http://localhost:18302
+```
 
-1. `all.ics`: 包含所有公司的财报日历
-2. `nasdaq100.ics`: 包含纳斯达克 100 指数成分股的财报日历
-3. `sp500.ics`: 包含标普 500 指数成分股的财报日历
-4. `dow30.ics`: 包含道琼斯 30 指数成分股的财报日历
-5. `customstock.ics`: 项目作者，也就是我自己，关注的一些个股的财报日历
-6. `selected.ics`: 2-5 的合集
+Convenience endpoints on the dev server:
 
-## 自己部署
+- `GET /dev/fetch` — trigger one `fetch`
+- `GET /dev/fetch-indices` — trigger one `fetch:indices`
+- `GET /dev/gen` — trigger one `gen`
 
-如果你想自己部署这个项目，可以参考以下步骤：
+## Layout
 
-实际上，程序本身是可以在本地使用 npm 进行部署到，这部分代码我也已经写了，不过我还是比较鼓励使用 Github 进行部署并执行自动化。
-
-1. Fork 这个项目
-2. 自行修改 `api/datas/cusomstock.json` 文件，将你关注的个股代码添加进去
-3. 在 Github 项目的环境变量中，根据 `env.example` 创建对应的环境变量
-4. 看看你创建的名称和 `github/workflows` 的 yml 文件中环境名称和对应的环境变量名称是否一致
-5. 然后就可以了
+```
+src/
+├── lib/        # shared helpers (date, paths, http, fs)
+├── config/     # env parsing, index metadata
+├── fetch/      # data sources: Nasdaq earnings, Wikipedia constituents
+├── process/    # filter + dedupe earnings rows
+├── generate/   # build .ics files
+├── cli/        # entrypoints (fetch / fetch-indices / gen)
+└── server.js   # local dev server
+data/
+├── earnings/   # daily JSON cache (gitignored, GH Actions cache between runs)
+└── indices/    # index constituents, refreshed weekly (in git)
+docs/
+├── index.html  # static landing page
+├── CNAME
+└── ics/        # generated .ics files (gitignored, written by build)
+```

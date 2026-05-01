@@ -1,8 +1,15 @@
-
-api/.DS_Store
-.env
 node_modules/
-package-lock.json
-ics/.DS_Store
+.env
 .DS_Store
 .vscode/settings.json
+
+# Generated at build time — never commit
+data/earnings/
+docs/ics/
+
+# Private AI context (per-machine, not for the public repo)
+local-context.md
+.claude/
+ref/
+AGENTS.md
+CLAUDE.md
