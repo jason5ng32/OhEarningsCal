@@ -24,7 +24,9 @@ jobs:
       - name: Refresh indices
         run: npm run fetch:indices
 
-      - name: Commit if changed
+      - name: Commit and trigger earnings rebuild if changed
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
@@ -34,4 +36,8 @@ jobs:
             git add data/indices
             git commit -m "chore(indices): weekly refresh"
             git push
+            # GITHUB_TOKEN-pushed commits don't trigger other workflows by
+            # design, so explicitly kick off the earnings build with the
+            # fresh constituents.
+            gh workflow run earnings.yml --ref main
           fi

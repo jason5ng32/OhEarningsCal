@@ -4,6 +4,15 @@ on:
   schedule:
     - cron: '34 4,16 * * *' # 04:34 and 16:34 UTC
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'src/**'
+      - 'docs/**'
+      - 'data/indices/**'
+      - 'package.json'
+      - 'package-lock.json'
+      - '.github/workflows/earnings.yml'
 
 permissions:
   contents: read
