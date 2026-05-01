@@ -1,6 +1,7 @@
 import { readJSONIfExists } from '../lib/fs.js';
 import { earningsCacheFile } from '../lib/paths.js';
 import { dateRange, shiftDays, todayISO } from '../lib/date.js';
+import { parseMarketCap } from '../lib/marketcap.js';
 
 const DEFAULT_WINDOW = { before: 30, after: 30 };
 
@@ -15,6 +16,7 @@ function toEvent(row, dateISO, watchlistEntry) {
     symbol: row.symbol,
     date: dateISO,
     marketCap: row.marketCap || 'N/A',
+    marketCapValue: parseMarketCap(row.marketCap),
     fiscalQuarterEnding: row.fiscalQuarterEnding || '',
     time: normalizeTime(row.time),
     epsForecast: row.epsForecast || '',

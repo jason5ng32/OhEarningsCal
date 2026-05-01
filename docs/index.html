@@ -203,8 +203,11 @@
       </p>
     </header>
 
-    <h2>Subscriptions</h2>
-    <div class="cards" id="cards"></div>
+    <h2>By index &amp; watchlist</h2>
+    <div class="cards" id="cards-index"></div>
+
+    <h2>By market cap</h2>
+    <div class="cards" id="cards-marketcap"></div>
 
     <section class="help">
       <h3>How to subscribe</h3>
@@ -222,13 +225,20 @@
   </main>
 
   <script>
-    const ICS_LIST = [
+    const ICS_BY_INDEX = [
       { slug: 'selected',    icon: '⭐', name: 'Selected',      desc: 'All indices + custom watchlist, deduped' },
       { slug: 'nasdaq100',   icon: '💻', name: 'Nasdaq-100',    desc: 'Nasdaq-100 constituents' },
       { slug: 'sp500',       icon: '📈', name: 'S&P 500',       desc: 'S&P 500 constituents' },
       { slug: 'dow30',       icon: '🏛️', name: 'Dow 30',         desc: 'Dow Jones Industrial Average constituents' },
       { slug: 'customstock', icon: '🎯', name: 'Custom',        desc: 'Driven by the CUSTOM_STOCKS repo variable' },
       { slug: 'all',         icon: '🌐', name: 'All earnings',  desc: 'Every reporting company — large file' },
+    ];
+
+    const ICS_BY_MARKETCAP = [
+      { slug: 'megacap',  icon: '🐋', name: 'Mega Cap',  desc: 'Companies > $200B' },
+      { slug: 'largecap', icon: '🦈', name: 'Large Cap', desc: '$10B – $200B' },
+      { slug: 'midcap',   icon: '🐟', name: 'Mid Cap',   desc: '$2B – $10B' },
+      { slug: 'smallcap', icon: '🐠', name: 'Small Cap', desc: 'Companies < $2B' },
     ];
 
     const baseURL = new URL('ics/', window.location.href).toString();
@@ -254,10 +264,16 @@
       return card;
     }
 
-    const container = document.getElementById('cards');
-    for (const item of ICS_LIST) container.appendChild(makeCard(item));
+    function renderInto(containerId, list) {
+      const container = document.getElementById(containerId);
+      for (const item of list) container.appendChild(makeCard(item));
+      return container;
+    }
 
-    container.addEventListener('click', async (e) => {
+    renderInto('cards-index', ICS_BY_INDEX);
+    renderInto('cards-marketcap', ICS_BY_MARKETCAP);
+
+    document.body.addEventListener('click', async (e) => {
       const btn = e.target.closest('button[data-copy]');
       if (!btn) return;
       try {

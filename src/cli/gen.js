@@ -2,7 +2,7 @@ import { readJSONIfExists } from '../lib/fs.js';
 import { indexFile } from '../lib/paths.js';
 import { processEarnings } from '../process/earnings.js';
 import { writeIcsFile } from '../generate/ics.js';
-import { INDICES, CUSTOM_SLUG, SELECTED_SLUG, ALL_SLUG } from '../config/indices.js';
+import { INDICES, CUSTOM_SLUG, SELECTED_SLUG, ALL_SLUG, MARKETCAP_TIERS } from '../config/indices.js';
 import { env } from '../config/env.js';
 
 async function loadIndex(slug) {
@@ -59,9 +59,18 @@ async function main() {
     await genForList(SELECTED_SLUG, 'Selected (Indices + Custom)', selected);
   }
 
-  // 4. all = no filter, every ticker the API returned.
+  // 4. all + market-cap tiers — both derived from the unfiltered full set.
+  //    Always compute the full set so tiers can be generated regardless of
+  //    SHOULD_GEN_ALL; only the all.ics write is gated on the flag.
+  const allEvents = await processEarnings({ watchlist: null });
   if (env.shouldGenAll) {
-    await genForList(ALL_SLUG, 'All Earnings', null);
+    await writeIcsFile({ slug: ALL_SLUG, label: 'All Earnings', events: allEvents });
+  }
+  for (const tier of MARKETCAP_TIERS) {
+    const events = allEvents.filter(
+      (e) => e.marketCapValue !== null && e.marketCapValue >= tier.min && e.marketCapValue < tier.max,
+    );
+    await writeIcsFile({ slug: tier.slug, label: tier.label, events });
   }
 
   console.log('[gen] done.');

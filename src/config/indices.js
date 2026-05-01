@@ -42,6 +42,16 @@ export const CUSTOM_SLUG = 'customstock';
 export const SELECTED_SLUG = 'selected';
 export const ALL_SLUG = 'all';
 
+// Market-cap tiers — boundaries are USD, applied to the marketCapValue field
+// produced by process/earnings.js. Companies with N/A market cap are skipped.
+const B = 1_000_000_000;
+export const MARKETCAP_TIERS = [
+  { slug: 'megacap',  label: 'Mega Cap (>$200B)',      min: 200 * B, max: Infinity },
+  { slug: 'largecap', label: 'Large Cap ($10B–$200B)', min: 10 * B,  max: 200 * B },
+  { slug: 'midcap',   label: 'Mid Cap ($2B–$10B)',     min: 2 * B,   max: 10 * B },
+  { slug: 'smallcap', label: 'Small Cap (<$2B)',       min: 0,       max: 2 * B },
+];
+
 export function indexBySlug(slug) {
   return INDICES.find((i) => i.slug === slug) ?? null;
 }
