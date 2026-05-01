@@ -2,82 +2,78 @@
 
 <a href="https://trendshift.io/repositories/8148" target="_blank"><img src="https://trendshift.io/api/badge/repositories/8148" alt="jason5ng32%2FOhEarningsCal | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
 
-这个项目本来是我自用的一个小工具，功能是，将我关注的美股公司的财报日程，自动导入到我的日历（比如 Google Calendar）中。
+Subscribe to US stock earnings dates from your calendar app. This started as a tool I built for myself — I'd rather glance at my calendar than open a brokerage app — and turned out useful enough to open-source.
 
-啊，我就是不喜欢打开炒股 app 看，我就是喜欢在日历中看。
+## Just use it
 
-或许这个工具对你也有用，所以我把它开源了。
+Visit [https://earnings.beavern.com/](https://earnings.beavern.com/), pick a calendar, copy the link, then add it as a calendar subscription in your app of choice.
 
-## 直接使用
+The calendars cover the US market only, in a rolling window of ±30 days around today (anything further out isn't accurate enough to matter).
 
-打开 [https://earnings.beavern.com/](https://earnings.beavern.com/)，找到已经生成的 ics 文件，复制链接，然后在你的日历软件中，添加一个新的日历，输入这个链接，就可以了。
+## Calendars
 
-备注：仅仅包含美国市场的财报日历。日历内容只包含当天前后 30 天的，再多其实没有意义。
-
-## ics 清单
-
-| 文件 | 内容 |
+| File | Contents |
 | --- | --- |
-| `all.ics` | 所有上市公司财报 |
-| `nasdaq100.ics` | 纳斯达克 100 成分股 |
-| `sp500.ics` | 标普 500 成分股 |
-| `dow30.ics` | 道琼斯 30 成分股 |
-| `customstock.ics` | 自定义关注列表（来自环境变量 `CUSTOM_STOCKS`） |
-| `selected.ics` | 上面 4 个的合集 |
+| `all.ics` | Every company that reports earnings in the window |
+| `nasdaq100.ics` | Nasdaq-100 constituents |
+| `sp500.ics` | S&P 500 constituents |
+| `dow30.ics` | Dow Jones Industrial Average constituents |
+| `customstock.ics` | A custom watchlist driven by the `CUSTOM_STOCKS` env var |
+| `selected.ics` | Union of the four above, deduplicated |
 
-## 自己部署
+## Self-hosting
 
-1. Fork 这个项目
-2. 在 GitHub 项目的 **Settings → Pages** 把 **Source** 改成 **GitHub Actions**
-3. 在 **Settings → Secrets and variables → Actions → Variables** 里设置：
+1. Fork this repo
+2. **Settings → Pages → Source** → switch to **GitHub Actions**
+3. **Settings → Secrets and variables → Actions → Variables** → add:
    - `SHOULD_GEN_SELECTED` = `true` / `false`
    - `SHOULD_GEN_ALL` = `true` / `false`
-   - `CUSTOM_STOCKS` = 逗号分隔的 ticker 列表，例如 `PDD,BABA,TCEHY`（留空则不生成 customstock.ics）
-4. 等首次 schedule 触发，或在 Actions 里手动 dispatch 一次 `Update earnings calendar`
+   - `CUSTOM_STOCKS` = comma-separated tickers, e.g. `PDD,BABA,TCEHY` (leave empty to skip `customstock.ics`)
+4. Wait for the next scheduled run, or kick off **Actions → Update earnings calendar → Run workflow** manually.
 
-## 自动化
+## Automation
 
-| Workflow | 触发 | 做什么 |
+| Workflow | Schedule | What it does |
 | --- | --- | --- |
-| `earnings.yml` | 每天 04:34 / 16:34 UTC | 拉财报数据 → 生成 ics → 部署到 GitHub Pages |
-| `indices.yml` | 每周一 06:17 UTC | 从 Wikipedia 刷新指数成分股，提交到 `data/indices/` |
+| `earnings.yml` | Daily 04:34 / 16:34 UTC | Fetch earnings → build ics → deploy to GitHub Pages |
+| `indices.yml` | Mondays 06:17 UTC | Refresh index constituents from Wikipedia, commit `data/indices/` |
 
-财报日期数据缓存在 GitHub Actions cache 里，不进 git——`main` 分支永远只承载源代码和指数成分股。
+Earnings data is cached in GitHub Actions cache, never in git — `main` only carries source code and the index constituents.
 
-## 本地开发
+## Local development
 
 ```sh
 npm install
-cp .env.example .env   # 编辑环境变量
+cp .env.example .env   # edit env vars
 
-npm run fetch:indices  # 首次跑 / 想刷新指数成分股
-npm run fetch          # 拉过去 1 天 + 未来 30 天财报到 data/earnings/
-npm run gen            # 生成 docs/ics/*.ics
-npm run dev            # 起本地服务器，访问 http://localhost:18302
+npm run fetch:indices  # first run / when refreshing constituents
+npm run fetch          # pull yesterday + next 30 days into data/earnings/
+npm run gen            # write docs/ics/*.ics
+npm run dev            # http://localhost:18302
 ```
 
-本地 dev 服务器的额外端点（方便调试）：
+Convenience endpoints on the dev server:
 
-- `GET /dev/fetch` — 触发一次 `fetch`
-- `GET /dev/fetch-indices` — 触发一次 `fetch:indices`
-- `GET /dev/gen` — 触发一次 `gen`
+- `GET /dev/fetch` — trigger one `fetch`
+- `GET /dev/fetch-indices` — trigger one `fetch:indices`
+- `GET /dev/gen` — trigger one `gen`
 
-## 目录结构
+## Layout
 
 ```
 src/
-├── lib/        # 工具函数（日期、路径、HTTP、文件 IO）
-├── config/     # 环境变量与各 index 的元信息
-├── fetch/      # 拉数据：财报（Nasdaq）、指数成分股（Wikipedia）
-├── process/    # 清洗 + 去重财报数据
-├── generate/   # 生成 .ics 文件
-├── cli/        # 各命令的入口（fetch / fetch-indices / gen）
-└── server.js   # 本地调试服务器
+├── lib/        # shared helpers (date, paths, http, fs)
+├── config/     # env parsing, index metadata
+├── fetch/      # data sources: Nasdaq earnings, Wikipedia constituents
+├── process/    # filter + dedupe earnings rows
+├── generate/   # build .ics files
+├── cli/        # entrypoints (fetch / fetch-indices / gen)
+└── server.js   # local dev server
 data/
-├── earnings/   # 每日财报 JSON 缓存（.gitignore，跨 run 用 GH Actions cache）
-└── indices/    # 指数成分股，每周自动更新（进 git）
+├── earnings/   # daily JSON cache (gitignored, GH Actions cache between runs)
+└── indices/    # index constituents, refreshed weekly (in git)
 docs/
-├── index.html  # GitHub Pages 静态页
+├── index.html  # static landing page
 ├── CNAME
-└── ics/        # 生成的 ics 文件（.gitignore，build 时产生）
+└── ics/        # generated .ics files (gitignored, written by build)
 ```

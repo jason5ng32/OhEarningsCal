@@ -18,6 +18,10 @@ function buildEvent(entry) {
     '',
     `📱 Open in Stocks app: stocks://?symbol=${entry.symbol}`,
     `🌐 Yahoo Finance: https://finance.yahoo.com/quote/${entry.symbol}`,
+    '',
+    '— — —',
+    'Earnings calendar by Beavern · https://beavern.com',
+    'Move your scattered records into one place and see the whole picture at a glance.',
   ].filter((line) => line !== null).join('\n');
 
   return {
