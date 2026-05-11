@@ -45,7 +45,14 @@ jobs:
           else
             git add data/indices
             git commit -m "chore(indices): weekly refresh"
-            git push
+            # Remote may have advanced between checkout and push (manual
+            # commits, other workflows). Rebase + retry to avoid non-fast-
+            # forward failures.
+            for i in 1 2 3; do
+              git pull --rebase origin main && git push && break
+              echo "Push attempt $i failed, retrying..."
+              sleep $((i * 5))
+            done
             # GITHUB_TOKEN-pushed commits don't trigger other workflows by
             # design, so explicitly kick off the earnings build with the
             # fresh constituents.
