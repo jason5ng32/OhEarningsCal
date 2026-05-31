@@ -12,7 +12,7 @@ on:
       - 'src/config/indices.js'
       - 'src/lib/**'
       - 'package.json'
-      - 'package-lock.json'
+      - 'pnpm-lock.yaml'
       - '.github/workflows/indices.yml'
 
 permissions:
@@ -25,15 +25,17 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
+      - uses: pnpm/action-setup@v4
+
       - uses: actions/setup-node@v6
         with:
           node-version: '24'
-          cache: 'npm'
+          cache: 'pnpm'
 
-      - run: npm ci
+      - run: pnpm install --frozen-lockfile
 
       - name: Refresh indices
-        run: npm run fetch:indices
+        run: pnpm run fetch:indices
 
       - name: Commit and trigger earnings rebuild if changed
         env:

@@ -11,7 +11,7 @@ on:
       - 'docs/**'
       - 'data/indices/**'
       - 'package.json'
-      - 'package-lock.json'
+      - 'pnpm-lock.yaml'
       - '.github/workflows/earnings.yml'
 
 permissions:
@@ -32,12 +32,14 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
+      - uses: pnpm/action-setup@v4
+
       - uses: actions/setup-node@v6
         with:
           node-version: '24'
-          cache: 'npm'
+          cache: 'pnpm'
 
-      - run: npm ci
+      - run: pnpm install --frozen-lockfile
 
       - name: Restore earnings cache
         uses: actions/cache@v5
@@ -48,13 +50,13 @@ jobs:
             earnings-
 
       - name: Fetch earnings window
-        run: npm run fetch
+        run: pnpm run fetch
         env:
           SHOULD_GEN_SELECTED: ${{ vars.SHOULD_GEN_SELECTED }}
           SHOULD_GEN_ALL: ${{ vars.SHOULD_GEN_ALL }}
 
       - name: Generate ics files
-        run: npm run gen
+        run: pnpm run gen
         env:
           SHOULD_GEN_SELECTED: ${{ vars.SHOULD_GEN_SELECTED }}
           SHOULD_GEN_ALL: ${{ vars.SHOULD_GEN_ALL }}

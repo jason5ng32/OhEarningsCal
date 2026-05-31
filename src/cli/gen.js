@@ -8,7 +8,7 @@ import { env } from '../config/env.js';
 async function loadIndex(slug) {
   const rows = await readJSONIfExists(indexFile(slug));
   if (!rows) {
-    console.warn(`[gen] missing data/indices/${slug}.json — run 'npm run fetch:indices' first`);
+    console.warn(`[gen] missing data/indices/${slug}.json — run 'pnpm fetch:indices' first`);
     return [];
   }
   return rows;

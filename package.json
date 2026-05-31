@@ -4,11 +4,12 @@
   "description": "US stock earnings calendar — generates ICS subscription files for Nasdaq-100, S&P 500, Dow 30 and a custom watchlist.",
   "type": "module",
   "private": true,
+  "packageManager": "pnpm@11.5.0",
   "scripts": {
     "fetch": "node src/cli/fetch.js",
     "fetch:indices": "node src/cli/fetch-indices.js",
     "gen": "node src/cli/gen.js",
-    "build": "npm run fetch && npm run gen",
+    "build": "pnpm run fetch && pnpm run gen",
     "dev": "nodemon src/server.js",
     "start": "node src/server.js",
     "test": "node --test 'src/**/*.test.js'"
