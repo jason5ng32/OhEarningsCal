@@ -1,7 +1,7 @@
 {
   "name": "oh-earnings-cal",
   "version": "2.0.0",
-  "description": "US stock earnings calendar — generates ICS subscription files for Nasdaq-100, S&P 500, Dow 30 and a custom watchlist.",
+  "description": "US stock earnings calendar \u2014 generates ICS subscription files for Nasdaq-100, S&P 500, Dow 30 and a custom watchlist.",
   "type": "module",
   "private": true,
   "packageManager": "pnpm@11.10.0",
@@ -26,5 +26,10 @@
   "engines": {
     "node": ">=20"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "pnpm": {
+    "overrides": {
+      "nanoid": "3.3.17"
+    }
+  }
 }
